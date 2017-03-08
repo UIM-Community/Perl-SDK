@@ -4,6 +4,7 @@ CA UIM - Nimsoft - Perl SDK API Documentation
 ## API 
 
 - Return code [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/return_code.md)
+- CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
 
 ---
 
