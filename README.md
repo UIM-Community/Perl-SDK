@@ -5,10 +5,14 @@ CA UIM - Nimsoft - Perl SDK API Documentation
 
 - Return code [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/return_code.md)
 - CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
+- CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
+- PDS
 
----
+## Examples 
 
-- 
+- What difference between nimRequest and nimNamedRequest
+- How to handle and parse nimRequest and nimNamedRequest PDS.
+- Build a server solution
 
 ## Community (useful) links
 
