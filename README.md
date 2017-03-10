@@ -16,6 +16,7 @@ The goal of this github is to provide a complete and young documentation with be
 - CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
 - PDS
 - nimLog [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimLog.md)
+- nimAlarm [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimAlarm.md)
 
 ## Examples 
 
