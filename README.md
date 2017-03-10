@@ -16,7 +16,8 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 - Request (callback) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/request.md)
 - CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
 - CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
-- PDS
+- PDS [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/pds.md)
+- PDS (C Way) 
 - CI
 - QOS
 - nimLog [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimLog.md)
