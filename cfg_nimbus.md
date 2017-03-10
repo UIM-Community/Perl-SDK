@@ -29,10 +29,16 @@ print "$logfile - $loglevel \n";
 
 ## API 
 
-### debug(boolean) 
+### new(fileLocation) -> cfgHandle
+
+Create a new cfg.
+
+### debug(boolean) -> VOID
+
+Set debug to 1 or 0.
 
 ---
-### dump(nimbusCfg) 
+### dump(cfgHandle) -> VOID
 
 Dump the cfg content 
 
@@ -41,7 +47,7 @@ $cfg->dump($cfg);
 ```
 
 ---
-### getKeys(section) 
+### getKeys(section) -> ARRAY
 
 Get all keys from a section. 
 
@@ -52,7 +58,7 @@ foreach my $key ( $cfg->getKeys( $cfg->{"setup"} ) ) {
 ```
 
 ---
-### getSections(section)
+### getSections(section) -> ARRAY
 
 Get all section from a section 
 
@@ -63,7 +69,7 @@ foreach my $section ( $cfg->getSections( $cfg->{"setup"} ) ) {
 ```
 
 ---
-### getValues(section)
+### getValues(section) -> ARRAY
 
 
 Get all keys values from a section 
@@ -75,12 +81,12 @@ foreach my $val ( $cfg->getValues( $cfg->{"setup"} ) ) {
 ```
 
 ---
-### open(cfg) 
+### open(cfgHandle) -> VOID
 
 Open a new cfg (same as using new). Can be useful when you use a private converter.
 
 ---
-### setConverter(&src,&dst)
+### setConverter(&src,&dst) -> VOID
 
 The setConverter method takes a reference to a function as a parameter. This function is called whenever a new section is parsed. The default converter substitutes every hash(#) in a section name with a slash(/). This can be useful when using the slash (/) character as part of the section/key name, such as a filename or equivalent.
 
