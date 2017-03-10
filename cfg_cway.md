@@ -86,7 +86,22 @@ cfgKeyWrite($CFGHandler,"/setup","loglevel","5");
 
 ### cfgListRead(CFGHandle,section) -> BOOLEAN
 
-Reads the section that is specified and returns the list of values as an array.
+Reads the section that is specified and returns the list of values as an array. This is a `cfgValueList` method.
+
+Take the following xml : 
+
+```xml
+<setup>
+    loglevel = 5
+    logsize = 10000
+</setup>
+```
+
+And now you want to retrieve all keys value from setup (so we need 5 and 10000).
+
+```perl
+my ($valArr) = cfgListRead($CFGHandler,"/setup");
+```
 
 ### cfgListWrite(CFGHandle,section,keyBody,listArr) -> BOOLEAN
 
