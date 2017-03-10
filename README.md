@@ -3,6 +3,11 @@ CA UIM - Nimsoft - Perl SDK Better API Documentation
 
 The goal of this github is to provide a complete and young documentation with better explaination & examples.
 
+## Starter guide (need)
+
+- SDK_Perl on Windows
+- SDK_Perl on UNIX
+
 ## API 
 
 - Return code [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/return_code.md)
