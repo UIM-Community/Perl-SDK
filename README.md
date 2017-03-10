@@ -9,6 +9,7 @@ The goal of this github is to provide a complete and young documentation with be
 - CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
 - CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
 - PDS
+- nimLog [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimLog.md)
 
 ## Examples 
 
