@@ -5,11 +5,21 @@ This method allow to generate very simple alarm.
 ## Examples
 
 ```perl
-my ($RC,$AlarmID) = nimAlarm(5,"Hello world!","1.1.1")
+my ($RC,$AlarmID) = nimAlarm(NIML_CRITICAL,"Hello world!","1.1.1")
 if($RC == NIME_OK) {
     print "$AlarmID\n"
 }
 ```
+
+## Severity 
+
+| Constant name | value (INT) | 
+| NIML_CLEAR | 0 |
+| NIML_INFO | 1 |
+| NIML_WARNING | 2 |
+| NIML_MINOR | 3 |
+| NIML_MAJOR | 4 | 
+| NIML_CRITICAL | 5 |
 
 ## API
 
