@@ -14,6 +14,7 @@ if($RC == NIME_OK) {
 ## Severity 
 
 | Constant name | value (INT) | 
+| --- | --- |
 | NIML_CLEAR | 0 |
 | NIML_INFO | 1 |
 | NIML_WARNING | 2 |
