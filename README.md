@@ -1,5 +1,7 @@
 # nimsoft-perlsdk-doc
-CA UIM - Nimsoft - Perl SDK API Documentation
+CA UIM - Nimsoft - Perl SDK Better API Documentation
+
+The goal of this github is to provide a complete and young documentation with better explaination & examples.
 
 ## API 
 
