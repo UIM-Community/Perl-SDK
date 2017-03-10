@@ -6,6 +6,7 @@ The goal of this github is to provide a complete and young documentation with be
 ## API 
 
 - Return code [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/return_code.md)
+- Request (callback) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/request.md)
 - CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
 - CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
 - PDS
