@@ -7,7 +7,7 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 
 ## Starter guide (contribution welcome)
 
-- SDK_Perl on Windows
+- [SDK_Perl on Windows](starterguide/windows.md)
 - SDK_Perl on UNIX
 
 ## API 
