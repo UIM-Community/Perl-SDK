@@ -7,9 +7,7 @@ my $sess;
 
 if($sess = nimSession(NULL, NIMPORT_ANY)) {
     my $port = nimsPort($sess);
-    my $id = substr($0,rindex($0,"/")+1);
-    $id = "$id (Nimbus::Session)";
-    my $rc = nimRegisterProbe($id,$port);
+    my $rc = nimRegisterProbe("probe_name",$port);
     if($rc == 0) {
         # Ok... Add callback 
     }
@@ -17,6 +15,12 @@ if($sess = nimSession(NULL, NIMPORT_ANY)) {
         nimSessionFree($sess);
     }
 }
+```
+
+And if you want to unregister probe 
+
+```perl
+unRegisterProbe("probe_name");
 ```
 
 # Sessions 
