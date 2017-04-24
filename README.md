@@ -14,6 +14,7 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 
 - Return code [Here](return_code.md)
 - Request (callback) [Here](request.md)
+- Probe & sessions [Here](probe.md)
 - CFG (Nimbus API) [Here](cfg_nimbus.md)
 - CFG (C Way) [Here](cfg_cway.md)
 - PDS [Here](pds.md)
