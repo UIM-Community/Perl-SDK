@@ -5,6 +5,8 @@ The goal of this github is to provide a complete and young documentation with be
 
 Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
 
+> Work in progress ( ~ 35% done ). 
+
 ## Starter guide
 
 - [SDK_Perl on Windows](starterguide/windows.md)
@@ -14,11 +16,11 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 
 - Return code [Here](return_code.md)
 - Request (callback) [Here](request.md)
-- Probe & sessions [Here](probe.md)
+- Probe & sessions (C Interface) [Here](probe.md)
 - CFG (Nimbus API) [Here](cfg_nimbus.md)
-- CFG (C Way) [Here](cfg_cway.md)
+- CFG (C Interface) [Here](cfg_cway.md)
 - PDS [Here](pds.md)
-- PDS (C Way) [Here](pds_cway.md)
+- PDS (C Interface) [Here](pds_cway.md)
 - CI
 - QOS
 - nimLog [Here](nimLog.md)
