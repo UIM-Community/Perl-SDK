@@ -23,7 +23,7 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 - QOS
 - nimLog [Here](nimLog.md)
 - nimAlarm [Here](nimAlarm.md)
-- Utils
+- Utils [Here](util.md)
 
 ## Example(s)
 
