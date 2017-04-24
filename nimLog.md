@@ -21,4 +21,12 @@ nimLogClose()
 
 ### nimLogSetLevel(level) 
 
-### nimgLogTruncate(size)
+### nimLogTruncate(size)
+
+### nimLogTruncateSize()
+
+### nimLogTruncateTime()
+
+### nimLogPds
+
+### nimLogClose()
