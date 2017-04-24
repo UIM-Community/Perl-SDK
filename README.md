@@ -5,7 +5,7 @@ The goal of this github is to provide a complete and young documentation with be
 
 Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
 
-## Starter guide (contribution welcome)
+## Starter guide
 
 - [SDK_Perl on Windows](starterguide/windows.md)
 - SDK_Perl on UNIX
@@ -24,13 +24,13 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 - nimAlarm [Here](nimAlarm.md)
 - Utils
 
-## Examples (contribution welcome)
+## Example(s)
 
 - What difference between nimRequest and nimNamedRequest
 - How to handle and parse nimRequest and nimNamedRequest PDS.
 - Build a server solution
 
-## Community (useful) links
+## Community link(s)
 
 [Perl probe kickstarter - Part 1 - Develop a custom Perl probe](https://communities.ca.com/docs/DOC-231172625)
 
@@ -42,8 +42,6 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 
 [SDK Perl Releases Notes](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/ReleaseNotes/Perl%20SDK-2013%205.05.pdf)
 
-> Another link ? Pull-request !
-
-## Community Framework / Code base 
+## Community Framework(s)
 
 - Perluim [Here](https://github.com/fraxken/perluim)
