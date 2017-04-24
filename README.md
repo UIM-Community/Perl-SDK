@@ -17,7 +17,7 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 - CFG (Nimbus API) [Here](cfg_nimbus.md)
 - CFG (C Way) [Here](cfg_cway.md)
 - PDS [Here](pds.md)
-- PDS (C Way) 
+- PDS (C Way) [Here](pds_cway.md)
 - CI
 - QOS
 - nimLog [Here](nimLog.md)
