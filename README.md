@@ -12,16 +12,16 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 
 ## API 
 
-- Return code [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/return_code.md)
-- Request (callback) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/request.md)
-- CFG (Nimbus API) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_nimbus.md)
-- CFG (C Way) [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/cfg_cway.md)
-- PDS [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/pds.md)
+- Return code [Here](return_code.md)
+- Request (callback) [Here](request.md)
+- CFG (Nimbus API) [Here](cfg_nimbus.md)
+- CFG (C Way) [Here](cfg_cway.md)
+- PDS [Here](pds.md)
 - PDS (C Way) 
 - CI
 - QOS
-- nimLog [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimLog.md)
-- nimAlarm [Here](https://github.com/fraxken/nimsoft-perlsdk-doc/blob/master/nimAlarm.md)
+- nimLog [Here](nimLog.md)
+- nimAlarm [Here](nimAlarm.md)
 - Utils
 
 ## Examples (contribution welcome)
