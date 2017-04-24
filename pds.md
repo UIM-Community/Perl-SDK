@@ -7,9 +7,9 @@ PDS is the choseen format to communicate with the product. That mean Portable da
 ```perl
 use Nimbus::PDS; 
 
-my $PDS = pdsCreate();
+my $PDS = Nimbus::PDS->new(); 
+$PDS->put("name","robot_name",PDS_PCH);
 my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/hub","getrobots",$PDS);
-pdsDelete($PDS);
 
 if($RC == NIME_OK) {
     my $ROBOTS_PDS = Nimbus::PDS->new($RES);
@@ -47,9 +47,8 @@ my $PDS = Nimbus::PDS->new();
 Transform PDS to hash. Useful when a callback return a flat PDS structure 
 
 ```perl
-my $PDS = pdsCreate();
+my $PDS = Nimbus::PDS->new();
 my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/controller","get_info",$PDS);
-pdsDelete($PDS);
 
 if($RC == NIME_OK) {
     my $Info = Nimbus::PDS->new($RES)->asHash();
