@@ -15,7 +15,7 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 ## Overview 
 
 - Return code [Here](return_code.md)
-- Configuration Item (CI) [**todo**]
+- Configuration Item (CI) [Here](configuration_item.md)
 
 ## API 
 
