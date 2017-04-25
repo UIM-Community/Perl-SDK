@@ -12,20 +12,28 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 - [SDK_Perl on Windows](starterguide/windows.md)
 - SDK_Perl on UNIX
 
-## API 
+## Overview 
 
 - Return code [Here](return_code.md)
-- Request (callback) [Here](request.md)
-- Probe & sessions (C Interface) [Here](probe.md)
-- CFG (Nimbus API) [Here](cfg_nimbus.md)
-- CFG (C Interface) [Here](cfg_cway.md)
+- Configuration Item (CI) [**todo**]
+
+## API 
+
+- Server [**todo**]
+- Request (callback API) [Here](request.md)
+- CFG [Here](cfg_nimbus.md)
 - PDS [Here](pds.md)
-- PDS (C Interface) [Here](pds_cway.md)
 - CI
 - QOS
 - nimLog [Here](nimLog.md)
 - nimAlarm [Here](nimAlarm.md)
 - Utils [Here](util.md)
+
+## API (C Interface)
+
+- Probe & Sessions [Here](probe.md)
+- CFG [Here](cfg_cway.md)
+- PDS [Here](pds_cway.md)
 
 ## Example(s)
 
