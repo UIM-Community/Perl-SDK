@@ -38,10 +38,12 @@ Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK
 ## Example(s)
 
 - What difference between nimRequest and nimNamedRequest
-- How to handle and parse nimRequest and nimNamedRequest PDS.
+- [How to handle and parse nimRequest and nimNamedRequest PDS](examples/handlepds.md);
 - [Building and Publishing a User-defined Message](examples/publishing-user-message.md)
 - [Build a server solution](examples/build-server.md)
 - Build a server solution (Advanced)
+- Sending an Alarm message
+- Sending an Alarm message (Advanced)
 
 ## Community link(s)
 
