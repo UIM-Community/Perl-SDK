@@ -29,7 +29,11 @@ unRegisterProbe("probe_name");
 
 ### nimSession(any,port);
 
+Create a new session.
+
 ### nimNamedSession(); 
+
+Create a new named session.
 
 ### nimSessionFree(session); 
 
@@ -47,13 +51,31 @@ unRegisterProbe("probe_name");
 
 ### nimSessionRemoveList(); 
 
-### nimSessionFreeList(); 
+### nimSessionFreeList(sessList); 
 
-### nimSessionAddStdCallback(); 
+Free sessList.
 
-### nimSessionAddCallback(); 
+### nimSessionAddStdCallback(sess); 
 
-### nimSessionAddCallbackPds(); 
+Add a standart callback (like timeout,restart etc..).
+
+### nimSessionAddCallback(sess,cb_name); 
+
+Add command callback function on session. This function will register a user-defined callback to the session (or
+session list) for the command 'cb_name' provided by the caller. 
+
+### nimSessionAddCallbackPds(sess,cb_name,arg_format,security_level);
+
+Add callback with arguments
+
+```perl
+sub get_info {
+    my ($hMsg) = @_;
+    nimSendReply($hMsg);
+}
+
+nimSessionAddCallbackPds($sess,"get_info","",0);
+```
 
 ### nimSessionDispatch(timeout); 
 
