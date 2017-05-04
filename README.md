@@ -26,6 +26,7 @@ Some examples & references taken from C SDK Documentation.
 - PDS [Here](pds.md)
 - CI
 - QOS
+- Search [Here](search.md)
 - nimLog [Here](nimLog.md)
 - nimAlarm [Here](nimAlarm.md)
 - Utils [Here](util.md)
