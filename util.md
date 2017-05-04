@@ -1,5 +1,9 @@
 # Util API
 
+### nimInit(flag)
+
+### nimEnd(flag)
+
 ### nimEncryptString(string)
 
 Encrypt string.
@@ -22,3 +26,11 @@ print nimError2Txt($rc);
 ### nimLogout();
 
 ### nimChangeLogin(login,password);
+
+### nimGetCurrentSid()
+
+### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey)
+
+### nimGetNameToIp(szName)
+
+### nimGetIpToName(szIp,szPort);
