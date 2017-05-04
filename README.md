@@ -20,7 +20,7 @@ Some examples & references taken from C SDK Documentation.
 
 ## API 
 
-- Server [**todo**]
+- Server [Here](server.md)
 - Request (callback API) [Here](request.md)
 - CFG [Here](cfg_nimbus.md)
 - PDS [Here](pds.md)
