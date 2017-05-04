@@ -9,7 +9,7 @@ use Nimbus::PDS;
 
 my $PDS = Nimbus::PDS->new(); 
 $PDS->put("name","robot_name",PDS_PCH);
-my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/hub","getrobots",$PDS);
+my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/hub","getrobots",$PDS->data);
 
 if($RC == NIME_OK) {
     my $ROBOTS_PDS = Nimbus::PDS->new($RES);
@@ -48,7 +48,7 @@ Transform PDS to hash. Useful when a callback return a flat PDS structure
 
 ```perl
 my $PDS = Nimbus::PDS->new();
-my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/controller","get_info",$PDS);
+my ($RC,$RES) = nimNamedRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/controller","get_info",$PDS->data);
 
 if($RC == NIME_OK) {
     my $Info = Nimbus::PDS->new($RES)->asHash();
