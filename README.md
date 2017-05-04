@@ -44,7 +44,7 @@ Some examples & references taken from C SDK Documentation.
 - [Build a server solution](examples/build-server.md)
 - Build a server solution (Advanced)
 - [Sending an Alarm message](examples/sending-alarm.md)
-- Sending an Alarm message (Advanced)
+- [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
 
 ## Community link(s)
 
