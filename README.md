@@ -20,20 +20,17 @@ Some examples & references taken from C SDK Documentation.
 
 ## API 
 
-- Server [Here](server.md)
-- Request (callback API) [Here](request.md)
-- CFG [Here](cfg_nimbus.md)
-- PDS [Here](pds.md)
+- Session (Nimbus) [Here](server.md)
+- Request (Callback) [Here](request.md)
+- CFG (Nimbus) [Here](cfg_nimbus.md)
+- PDS (Nimbus) [Here](pds.md)
 - CI
 - QOS
 - Search [Here](search.md)
 - nimLog [Here](nimLog.md)
 - nimAlarm [Here](nimAlarm.md)
 - Utils [Here](util.md)
-
-## API (C Interface)
-
-- Probe & Sessions [Here](probe.md)
+- Probe & Sessions (Advanced) [Here](probe.md)
 - CFG [Here](cfg_cway.md)
 - PDS [Here](pds_cway.md)
 
