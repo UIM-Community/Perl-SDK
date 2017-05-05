@@ -6,6 +6,19 @@
 
 #### nimPostMessage()
 
+#### nimSendReply(hMsg,rc,pds)
+
+Reply to message! 
+
+```perl
+sub cb_execute {
+    my ($hMsg) = @_;
+    my $PDS = Nimbus::PDS->new(); 
+    $PDS->put("status","ok",PDS_PCH);
+    nimSendReply($hMsg,NIME_OK,$PDS);
+}
+```
+
 #### nimEncryptString(string)
 
 Encrypt string.
