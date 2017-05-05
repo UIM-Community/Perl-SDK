@@ -22,13 +22,13 @@ The goal of this github is to provide a complete and young documentation with be
 
 - nimRequest & nimNamedRequest - [Here](request.md)
 - [**Nimbus**] Session(s) - [Here](server.md)
-- Probe & Session(s) (Advanced) - [Here](probe.md)
+- [**Work in progress**] Probe & Session(s) (**Advanced**) - [Here](probe.md)
 - [**Nimbus**] CFG - [Here](cfg_nimbus.md)
 - CFG - [Here](cfg_cway.md)
 - [**Nimbus**] PDS - [Here](pds.md)
 - PDS - [Here](pds_cway.md)
-- CI
-- QOS
+- [**Contribution Welcome**] CI
+- [**Contribution Welcome**] QOS
 - nimGet - [Here](nimGet.md)
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
