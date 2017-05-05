@@ -23,6 +23,23 @@ nimGet methods are created to retrieve or transform information retrieved from l
 
 ## API 
 
+#### nimGetNameToIp(szName)
+
+Transform nimbus addresse into nimbus ip and port.
+
+```perl
+my($rc,$szIp,$iPort) =  nimGetNameToIp ($szName);
+```
+
+#### nimGetIpToName(szIp,szPort);
+
+Transform nimbus ip and port into a nimbus addr.
+
+```perl
+my($rc,$szName) =  nimGetIpToName ($szIp,$iPort);
+```
+
+
 #### nimGetVarStr(symbol) 
 
 ```perl
