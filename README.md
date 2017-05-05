@@ -3,10 +3,10 @@ CA UIM - Nimsoft - Perl SDK Documentation
 
 The goal of this github is to provide a complete and young documentation with better explaination & examples.
 
-Original documentation [Here](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
-Some examples & references taken from C SDK Documentation.
+- [Original documentation](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
+- Some examples & references taken from C SDK Documentation.
 
-> Work in progress ( ~ 50% done ). 
+> Work in progress ( ~ 60% done ). 
 
 ## Starter guide
 
