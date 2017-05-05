@@ -20,23 +20,22 @@ Some examples & references taken from C SDK Documentation.
 
 ## API 
 
-- Session (Nimbus) [Here](server.md)
-- Request (Callback) [Here](request.md)
-- CFG (Nimbus) [Here](cfg_nimbus.md)
-- PDS (Nimbus) [Here](pds.md)
+- nimRequest & nimNamedRequest - [Here](request.md)
+- [**Nimbus**] Session(s) - [Here](server.md)
+- Probe & Session(s) (Advanced) - [Here](probe.md)
+- [**Nimbus**] CFG - [Here](cfg_nimbus.md)
+- CFG - [Here](cfg_cway.md)
+- [**Nimbus**] PDS - [Here](pds.md)
+- PDS - [Here](pds_cway.md)
 - CI
 - QOS
-- Search [Here](search.md)
-- nimLog [Here](nimLog.md)
-- nimAlarm [Here](nimAlarm.md)
-- Utils [Here](util.md)
-- Probe & Sessions (Advanced) [Here](probe.md)
-- CFG [Here](cfg_cway.md)
-- PDS [Here](pds_cway.md)
+- nimFind - [Here](search.md)
+- nimLog - [Here](nimLog.md)
+- nimAlarm - [Here](nimAlarm.md)
+- others methods - [Here](util.md)
 
 ## Example(s)
 
-- What difference between nimRequest and nimNamedRequest
 - [How to handle and parse nimRequest and nimNamedRequest PDS](examples/handlepds.md);
 - [Building and Publishing a User-defined Message](examples/publishing-user-message.md)
 - [Build a server solution](examples/build-server.md)
