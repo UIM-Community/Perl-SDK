@@ -45,6 +45,30 @@ Some examples & references taken from C SDK Documentation.
 - [Sending an Alarm message](examples/sending-alarm.md)
 - [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
 
+## Troubleshooting 
+
+#### Symptom: Scripts halt with an error message similar to:
+```
+Can't locate Nimbus/API.pm in @INC (@INC contains: /usr/local/lib/perl5/sun4-solaris/5.00404 /usr/local/lib/perl5 /usr/local/lib/perl5/site_perl/sun4-solaris /usr/local/lib/perl5/site_perl .) at subex.pl line 1.
+BEGIN failed--compilation aborted at subex.pl line 1.
+``` 
+
+Possible causes:
+1. The perllib directory structure is not reachable for Perl
+   - Add PERL5LIB to your environment  (for example PERL5LIB = /opt/nimsoft/perllib)
+   - Add use lib ("/opt/nimsoft/perllib") to your script header (before use Nimbus::API)
+2. Perl Extensions for Nimsoft are binary incompatible with the distribution
+   - Get a compatible Perl distribution (or contact Nimsoft support).
+
+#### Symptom: You are unable to locate the perllib directory on the file system.
+
+Possible causes:
+1. The Nimsoft runtime libraries for Perl have not been installed
+   - Install the runtime libraries
+2. They do not reside under the root installation directory for Nimsoft
+   - WIN32: c:\program files\Nimsoft\perllib
+   - UNIX:    /opt/nimsoft/perllib.
+
 ## Community link(s)
 
 [Perl probe kickstarter - Part 1 - Develop a custom Perl probe](https://communities.ca.com/docs/DOC-231172625)
