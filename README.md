@@ -29,6 +29,7 @@ Some examples & references taken from C SDK Documentation.
 - PDS - [Here](pds_cway.md)
 - CI
 - QOS
+- nimGet - [Here](nimGet.md)
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
