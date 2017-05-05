@@ -4,6 +4,8 @@
 
 #### nimEnd(flag)
 
+#### nimPostMessage()
+
 #### nimEncryptString(string)
 
 Encrypt string.
