@@ -18,6 +18,14 @@ The goal of this github is to provide a complete and young documentation with be
 - Return code [Here](return_code.md)
 - Configuration Item (CI) [Here](configuration_item.md)
 
+The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the development of probes that are written in Perl.
+
+- API.pm is the foundation Perl object, providing your interface into the Nimsoft Controller. Three other Perl objects are abstractions for making particular tasks more convenient:
+
+   - CFG.pm - for manipulating probe configuration files
+   - PDS.pm - for working with machine-independent data manipulation routines (PDS means Portable Data Stream)
+   - Session.pm - for using the functions available once a Nimsoft session is established.
+
 ## API 
 
 - nimRequest & nimNamedRequest - [Here](request.md)
@@ -34,6 +42,8 @@ The goal of this github is to provide a complete and young documentation with be
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
 - others methods - [Here](util.md)
+
+> API Tagged Nimbus are high-level perl class implementation provided within the SDK_Perl.
 
 ## Example(s)
 
