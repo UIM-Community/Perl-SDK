@@ -1,8 +1,8 @@
 # Util API
 
-### nimInit(flag)
+#### nimInit(flag)
 
-### nimEnd(flag)
+#### nimEnd(flag)
 
 #### nimEncryptString(string)
 
@@ -43,17 +43,4 @@ Create suppression definition string.
 my $szSup = nimSuppToStr(0,0,0,"FileSystem|$name");
 $szSup = nimSuppToStr(1,0,60,"");
 ```
-
-#### nimGetNameToIp(szName)
-
-```perl
-my($rc,$szIp,$iPort) =  nimGetNameToIp ($szName);
-```
-
-#### nimGetIpToName(szIp,szPort);
-
-```perl
-my($rc,$szName) =  nimGetIpToName ($szIp,$iPort);
-```
-
 Set new string variable.
