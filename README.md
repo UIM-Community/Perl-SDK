@@ -40,7 +40,6 @@ The goal of this github is to provide a complete and young documentation with be
 - [How to handle and parse nimRequest and nimNamedRequest PDS](examples/handlepds.md);
 - [Building and Publishing a User-defined Message](examples/publishing-user-message.md)
 - [Build a server solution](examples/build-server.md)
-- Build a server solution (Advanced)
 - [Subscribing to bus messages](examples/subscribing_bus.md)
 - [Sending an Alarm message](examples/sending-alarm.md)
 - [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
