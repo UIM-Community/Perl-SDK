@@ -1,6 +1,6 @@
 # PDS
 
-PDS is the choseen format to communicate with the product. That mean Portable data string. 
+The PDS object is a class wrapper around the Nimbus::API PDS functions. Reference the PDS.pm module for the functions included.
 
 ## Examples 
 
