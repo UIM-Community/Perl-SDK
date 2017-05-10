@@ -25,7 +25,8 @@ nimGet methods are created to retrieve or transform information retrieved from l
 
 #### nimGetNameToIp(szName)
 
-Transform nimbus addresse into nimbus ip and port.
+Look up a NimBUS address to find the IP address and port number to connect to, used together with
+nimSessionConnect or nimSession. Use nimNamedSession instead.
 
 ```perl
 my($rc,$szIp,$iPort) =  nimGetNameToIp ($szName);
@@ -42,6 +43,8 @@ my($rc,$szName) =  nimGetIpToName ($szIp,$iPort);
 
 #### nimGetVarStr(symbol) 
 
+Get the requested API value. Typically used for fetching the current hub, spooler or controller IP.
+
 ```perl
 my ($rc,$domain) = nimGetVarStr(NIMV_HUBDOMAIN);
 if($rc == NIME_OK) {
@@ -50,6 +53,8 @@ if($rc == NIME_OK) {
 ```
 
 #### nimGetVarInt(symbol)
+
+Return the requested API value. E.g. what = NIMV_SPOOLPORT returns the local spooler port
 
 ```perl
 my ($rc,$ip) = nimGetVarStr(NIMV_ROBOTIP);
@@ -60,6 +65,8 @@ if($rc == NIME_OK) {
 
 #### nimSetVarInt(symbol) 
 
-Set new int variable.
+Set the named API variable. Typically used to change the default spooler port.
 
 #### nimSetVarStr(symbol) 
+
+Set a new API value. Typically used to change default spooler IP.
