@@ -1,8 +1,12 @@
 # CFG (Nimbus::CFG)
 
-The default way to manage CFG in perl probe is Nimbus::CFG API. 
+The CFG object is a class wrapper around the functions that are targeted against configuration files. The relevant functions are listed in the CFG.pm module.
 
-Start by creating a file with the extension '.cfg', in this cfg we have a structure like this (customise for your probe/script) : 
+Nimbus::API::cfg*
+
+When a new CFG object is constructed the constructor takes one required argument (the configuration filename), and one optional (a 'private' hash). It is normal to maintain the hash within the CFG object, but in some cases it can be useful to add the configuration data to a private hash.
+
+## Example
 
 ```xml
 <setup>
