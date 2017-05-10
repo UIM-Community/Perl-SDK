@@ -20,7 +20,7 @@ pdsDelete($PDS);
 ### pdsCreate()
 
 This function is a convenience function on top of pdsCreateSize(), and will create a PDS with data size 1024
-bytes
+bytes.
 
 ### pdsDelete(pds)
 
@@ -48,6 +48,11 @@ This convenience function will return the number of PDS elements in the specifie
 
 ### pdsGetNext()
 
+This function will use the current 'get' position as the starting point for element extraction. Please use the
+pdsRewind() function prior to the first pdsGetNext() call. Note that if no pdsGet() or any of the pdsGet
+convenience functions (e.g. pdsGet_INT) have been used, then the get pointer is initiated to the start of the PDS
+buffer
+
 ### pdsRemove(pds,key)
 
 Remove a key from PDS Object.
@@ -69,3 +74,6 @@ Put a new PDS Object.
 Put a new Float in the PDS Object.
 
 ### pdsPutTable(tablePds,type,table_name)
+
+This function will generate indexed elements, from zero (0) and upwards. The table equivalent of the type is used
+as the target PDS. For instance will a type of PDS_PCH give a table of type PDS_PPCH.
