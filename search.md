@@ -51,5 +51,9 @@ The find functions take a PDS with filters for different search criteria and a f
 #### nimFindAsPds($pdsFilter,$iFlags)
 > Return rc,data
 
+This is a wrapper around nimFindAsFunc(). pdsPutTable() is used to fill pdsOut
+
 #### nimFindAsTable($pdsFilter,$iFlags)
 > Return rc,data
+
+This is a wrapper around nimFindAsFunc(). cslLineInsert() is used to fill pppchOut
