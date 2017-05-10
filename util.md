@@ -27,17 +27,17 @@ sub cb_execute {
 }
 ```
 
-#### nimEncryptString(string)
+#### nimEncryptString(string) -> String
 
 Will encrypt the input string using the Twofish algorithm and the encryption key. The function returns a base64
 encoded and encrypted string. The result must be freed after use.
 
-#### nimDecryptString(string)
+#### nimDecryptString(string) -> String
 
 The input string must be encrypted by nimEncryptString and the key must be the same. The result must be freed
 after use.
 
-#### nimError2Txt(code)
+#### nimError2Txt(code) -> String
 
 Return return code as text 
 
@@ -46,24 +46,24 @@ my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-#### nimLogin(login,password);
+#### nimLogin(login,password); -> RC
 
 Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
 NimBUS. You must free the SID when done with it.
 
-#### nimLogout();
+#### nimLogout(); -> RC
 
 Log off the current user. All global user credentials will be removed
 
-#### nimChangeLogin(login,password);
+#### nimChangeLogin(login,password); -> RC
 
 Can be used to switch between two or more different logins
 
-#### nimGetCurrentSid()
+#### nimGetCurrentSid() -> Integer
 
 Returns a pointer to the current SID in use by the NimBUS API. NB! Do not modify this value
 
-#### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey)
+#### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
 
 Create suppression definition string.
 
