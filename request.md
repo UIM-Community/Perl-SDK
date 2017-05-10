@@ -2,6 +2,8 @@
 
 Perl SDK request are made to do callback on Nimsoft probes.
 
+**Find an example on how to handle request response** [Here](https://github.com/UIM-Community/Perl-SDK/blob/master/examples/handlepds.md)
+
 ## nimRequest(hostname,probePort,callback,pdsData)
 
 Send a request over the Nimsoft Bus to a server. This function does not traverse hub tunnels, because it attempts a direct connection to the given IP/port. A firewalled environment causes difficulties.
