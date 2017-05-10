@@ -2,9 +2,17 @@
 
 #### nimInit(flag)
 
+Initialize the NimBUS API. On windows that includes the WinSock initializing. This should be the first
+NimBUS call in any application.
+
 #### nimEnd(flag)
 
+Release all initialized NimBUS data. This should be the last NimBUS call in any application.
+
 #### nimPostMessage()
+
+Post a message with a given subject to NimBUS. This is the generic method that is the basis for both nimAlarm
+and nimQoS messages.
 
 #### nimSendReply(hMsg,rc,pds)
 
@@ -21,11 +29,13 @@ sub cb_execute {
 
 #### nimEncryptString(string)
 
-Encrypt string.
+Will encrypt the input string using the Twofish algorithm and the encryption key. The function returns a base64
+encoded and encrypted string. The result must be freed after use.
 
 #### nimDecryptString(string)
 
-Decrypt encrypted string (with nimEncryptString).
+The input string must be encrypted by nimEncryptString and the key must be the same. The result must be freed
+after use.
 
 #### nimError2Txt(code)
 
@@ -38,17 +48,20 @@ print nimError2Txt($rc);
 
 #### nimLogin(login,password);
 
+Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
+NimBUS. You must free the SID when done with it.
+
 #### nimLogout();
 
-Logout the current login.
+Log off the current user. All global user credentials will be removed
 
 #### nimChangeLogin(login,password);
 
-Change the current login for a another one.
+Can be used to switch between two or more different logins
 
 #### nimGetCurrentSid()
 
-Get the current process Sid.
+Returns a pointer to the current SID in use by the NimBUS API. NB! Do not modify this value
 
 #### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey)
 
