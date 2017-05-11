@@ -26,6 +26,13 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
    - CFG.pm - for manipulating probe configuration files
    - PDS.pm - for working with machine-independent data manipulation routines (PDS means Portable Data Stream)
    - Session.pm - for using the functions available once a Nimsoft session is established.
+   
+## Convensions used when prototyping the functions
+  - **sz** - prefix for string
+  - **i**  - prefix for integer (number)
+  - **b**  - prefix for boolean (true(1)/false(0))
+
+**rc** is the Return Code (integer)
 
 ## API 
 
