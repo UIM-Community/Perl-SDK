@@ -6,7 +6,7 @@ The goal of this github is to provide a complete perl SDK documentation with a b
 - [Original documentation](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
 - Some examples & references taken from C SDK Documentation.
 
-> Work in progress ( ~ 60% done ). 
+> Work in progress ( ~ 70% done ). 
 
 ## Starter guide
 
