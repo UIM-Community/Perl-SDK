@@ -41,7 +41,7 @@ my($rc,$szName) =  nimGetIpToName ($szIp,$iPort);
 ```
 
 
-#### nimGetVarStr(symbol) 
+#### nimGetVarStr(constant) 
 
 Get the requested API value. Typically used for fetching the current hub, spooler or controller IP.
 
@@ -52,7 +52,7 @@ if($rc == NIME_OK) {
 }
 ```
 
-#### nimGetVarInt(symbol)
+#### nimGetVarInt(constant)
 
 Return the requested API value. E.g. what = NIMV_SPOOLPORT returns the local spooler port
 
@@ -63,10 +63,10 @@ if($rc == NIME_OK) {
 }
 ```
 
-#### nimSetVarInt(symbol) 
+#### nimSetVarInt(constant) 
 
 Set the named API variable. Typically used to change the default spooler port.
 
-#### nimSetVarStr(symbol) 
+#### nimSetVarStr(constant) 
 
 Set a new API value. Typically used to change default spooler IP.
