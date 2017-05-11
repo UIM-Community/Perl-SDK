@@ -9,10 +9,17 @@ NimBUS call in any application.
 
 Release all initialized NimBUS data. This should be the last NimBUS call in any application.
 
-#### nimPostMessage()
+> nimInit and nimEnd are automatically triggered by Perl SDK.
+
+#### nimPostMessage(szSubject,uData,iLevel,szSup)
 
 Post a message with a given subject to NimBUS. This is the generic method that is the basis for both nimAlarm
 and nimQoS messages.
+
+- szSubject is the post channel.
+- udata     is a PDS record with user-data.
+- iLevel    is the post priority (see Level constants).
+- szSup     is the suppression definition.
 
 #### nimSendReply(hMsg,rc,pds)
 
@@ -25,6 +32,17 @@ sub cb_execute {
     $PDS->put("status","ok",PDS_PCH);
     nimSendReply($hMsg,NIME_OK,$PDS);
 }
+```
+
+#### gettimeofday()
+
+Returns the time in seconds and in micro-seconds if in a scalar context, or it returns an array with 2 values (seconds, useconds).
+
+```perl
+my @start = gettimeofday();
+# do stuff...
+my @end   = gettimeofday();
+my $diff  = tv_interval(@start,@end);
 ```
 
 #### nimEncryptString(str) -> String
