@@ -24,7 +24,7 @@ if($RC == NIME_OK) {
 
 ## API
 
-### nimAlarm(criticity,alarmMessage,subsystem_id,supkey,alarmSource)
+### nimAlarm(iCriticity,szMessage,szSubsys,szSupp_key,szSource)
 
 | argument | type | default value |
 | --- | --- | --- |
