@@ -53,6 +53,10 @@ pdsRewind() function prior to the first pdsGetNext() call. Note that if no pdsGe
 convenience functions (e.g. pdsGet_INT) have been used, then the get pointer is initiated to the start of the PDS
 buffer
 
+### pdsSearch(pds,szKey)
+
+Check the PDS $pds if it contains a key $key and retrieve the value, size and type of data	
+
 ### pdsRemove(pdsHandle,szKey)
 
 Remove a key from PDS Object.
