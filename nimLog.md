@@ -16,19 +16,24 @@ nimLogClose()
 
 ## API 
 
-### nimLogSet(file,prefix,level)
+### nimLogSet(szFile,szPrefix,ilevel,iFlag)
 
 Create log utility. (Like a class constructor).
+
+| Flags |
+| --- |
+| NIM_LOGF_NOTRUNC |
+| NIM_LOGF_RESETATSTART |
 
 ### nimLogClose()
 
 Close a log handle.
 
-### nimLog(level,message)
+### nimLog(ilevel,szMessage)
 
 Log a message in the current nimLog handler (defined with nimLogSet);
 
-### nimLogSetLevel(level) 
+### nimLogSetLevel(iLevel) 
 
 Set a new log-level
 
@@ -42,7 +47,7 @@ sleep(10);
 nimLogTruncate(); # Run 512 KB truncate!
 ```
 
-### nimLogTruncateSize(size)
+### nimLogTruncateSize(iSize)
 
 Truncate logsize (in KB). So it's base * 1024. (For example 512KB is 512*1024).
 
@@ -52,7 +57,7 @@ nimLogTruncateSize(512 * 1024);
 
 > Warn: Truncate only support one method (time or size) at the same time.
 
-### nimLogTruncateTime(time)
+### nimLogTruncateTime(iTime)
 
 Truncate the logfile based on time. Time is in `seconds`.
 
@@ -62,7 +67,7 @@ nimLogTruncateTime(60 * 10); # 10 minutes.
 
 > Warn: Truncate only support one method (time or size) at the same time.
 
-### nimLogPds(pds,print_name,loglevel,detail)
+### nimLogPds(pds,szPrint_name,iLogLevel,iDetail)
 
 Dump a PDS object to the log.
 
