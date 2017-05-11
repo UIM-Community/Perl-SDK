@@ -1,11 +1,11 @@
 # Util API
 
-#### nimInit(flag)
+#### nimInit(iFlag)
 
 Initialize the NimBUS API. On windows that includes the WinSock initializing. This should be the first
 NimBUS call in any application.
 
-#### nimEnd(flag)
+#### nimEnd(iFlag)
 
 Release all initialized NimBUS data. This should be the last NimBUS call in any application.
 
@@ -27,26 +27,26 @@ sub cb_execute {
 }
 ```
 
-#### nimEncryptString(string) -> String
+#### nimEncryptString(str) -> String
 
 Will encrypt the input string using the Twofish algorithm and the encryption key. The function returns a base64
 encoded and encrypted string. The result must be freed after use.
 
-#### nimDecryptString(string) -> String
+#### nimDecryptString(str) -> String
 
 The input string must be encrypted by nimEncryptString and the key must be the same. The result must be freed
 after use.
 
-#### nimError2Txt(code) -> String
+#### nimError2Txt(rc) -> String
 
-Return return code as text 
+Return return rc as text 
 
 ```perl
 my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-#### nimLogin(login,password); -> RC
+#### nimLogin(szLogin,szPassword); -> RC
 
 Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
 NimBUS. You must free the SID when done with it.
@@ -55,7 +55,7 @@ NimBUS. You must free the SID when done with it.
 
 Log off the current user. All global user credentials will be removed
 
-#### nimChangeLogin(login,password); -> RC
+#### nimChangeLogin(szLogin,szPassword); -> RC
 
 Can be used to switch between two or more different logins
 
