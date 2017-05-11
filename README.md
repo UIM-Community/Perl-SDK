@@ -17,6 +17,7 @@ The goal of this github is to provide a complete perl SDK documentation with a b
 
 - Return code [Here](return_code.md)
 - Configuration Item (CI) [Here](configuration_item.md)
+- Constants [Here](constants.md)
 
 The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the development of probes that are written in Perl.
 
