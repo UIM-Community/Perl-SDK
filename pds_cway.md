@@ -22,27 +22,27 @@ pdsDelete($PDS);
 This function is a convenience function on top of pdsCreateSize(), and will create a PDS with data size 1024
 bytes.
 
-### pdsDelete(pds)
+### pdsDelete(pdsHandle)
 
 This function will free the data related to the provided PDS handle previously created by pdsCreate().
 
-### pdsReset(pds) 
+### pdsReset(pdsHandle) 
 
 This function will reinitialize the PDS object, to an empty buffer, and initial pointer settings. If you wish to reset
 the get pointer please use the pdsRewind() function. This function will wipe out your data. The buffer is not
 reallocated
 
-### pdsRewind(pds)
+### pdsRewind(pdsHandle)
 
 This function will reinitialize the get pointer within the PDS object. This function is used when you want to
 perform multiple gets on the PDS.
 
-### pdsDump(pds)
+### pdsDump(pdsHandle)
 
 This function will run through the PDS, element for element and print the name, type, size and some of the data
 of the current PDS.
 
-### pdsCount(pds)
+### pdsCount(pdsHandle)
 
 This convenience function will return the number of PDS elements in the specified PDS object.
 
@@ -53,27 +53,27 @@ pdsRewind() function prior to the first pdsGetNext() call. Note that if no pdsGe
 convenience functions (e.g. pdsGet_INT) have been used, then the get pointer is initiated to the start of the PDS
 buffer
 
-### pdsRemove(pds,key)
+### pdsRemove(pdsHandle,szKey)
 
 Remove a key from PDS Object.
 
-### pdsPut_PCH(key,strval)
+### pdsPut_PCH(pdsHandle,szKey,szValue)
 
 Put a new string in the PDS Object.
 
-### pdsPut_INT(key,intval)
+### pdsPut_INT(pdsHandle,szKey,iValue)
 
 Put a new int in the PDS Object.
 
-### pdsPut_PDS(key,pds)
+### pdsPut_PDS(pdsHandle,szKey,pds)
 
 Put a new PDS Object.
 
-### pdsPut_F(key,float)
+### pdsPut_F(pdsHandle,szKey,iFloat)
 
 Put a new Float in the PDS Object.
 
-### pdsPutTable(tablePds,type,table_name)
+### pdsPutTable(tablePds,pds_constant,szTableName)
 
 This function will generate indexed elements, from zero (0) and upwards. The table equivalent of the type is used
 as the target PDS. For instance will a type of PDS_PCH give a table of type PDS_PPCH.
