@@ -45,6 +45,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - PDS - [Here](pds_cway.md)
 - [**Contribution Welcome**] CI
 - [**Contribution Welcome**] QOS
+- nimTimer 
 - nimGet - [Here](nimGet.md)
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
