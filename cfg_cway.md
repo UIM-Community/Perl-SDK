@@ -20,11 +20,7 @@ cfgClose($CFG);
 
 ## API 
 
-### cfgOpen(cfgLocation,readOnly) -> CFGHandle
-##### Arguments type
-| cfgLocation | readOnly |
-| --- | --- |
-| STRING | BOOLEAN |
+### cfgOpen(szLocation,bRead) -> CFGHandle
 
 Open the cfg file. First argument is the cfg location and the second one allow to only allow to read the cfg file.
 
@@ -50,7 +46,7 @@ cfgSync($CFGHandler);
 
 > Warning : It's **Sync** and not **Synch** 
 
-### cfgKeyDelete(CFGhandle,section,key) -> BOOLEAN
+### cfgKeyDelete(CFGhandle,szSection,szKey) -> BOOLEAN
 
 Delete a key in a specific section.
 
@@ -58,7 +54,7 @@ Delete a key in a specific section.
 cfgKeyDelete($CFGHandler,"/setup","logsize");
 ```
 
-### cfgKeyList(CFGhandle,section) -> ARRAY
+### cfgKeyList(CFGhandle,szSection) -> ARRAY
 
 Retrieving an array of keys from a section.
 
@@ -70,11 +66,11 @@ foreach my $keyName ($ARR) {
 }
 ```
 
-### cfgKeyRead(CFGHandle,section,key) -> STRING
+### cfgKeyRead(CFGHandle,szSection,szKey) -> STRING
 
 Read a key value from a section.
 
-### cfgKeyWrite(CFGHandle,section,key,value) -> BOOLEAN
+### cfgKeyWrite(CFGHandle,szSection,szKey,szValue) -> BOOLEAN
 
 Write a new value for a section/key. 
 
@@ -84,7 +80,7 @@ cfgKeyWrite($CFGHandler,"/setup","loglevel","5");
 
 > If the section does'nt exist it will be created.
 
-### cfgListRead(CFGHandle,section) -> BOOLEAN
+### cfgListRead(CFGHandle,szSection) -> BOOLEAN
 
 Reads the section that is specified and returns the list of values as an array. This is a `cfgValueList` method.
 
@@ -103,7 +99,7 @@ And now you want to retrieve all keys value from setup (so we need 5 and 10000).
 my ($valArr) = cfgListRead($CFGHandler,"/setup");
 ```
 
-### cfgListWrite(CFGHandle,section,keyBody,listArr) -> BOOLEAN
+### cfgListWrite(CFGHandle,szSection,szKeyBody,listArr) -> BOOLEAN
 
 Replace a section with the contents of the array list. Each entry in the array is treated as a value. The key names are generated based on the KeyBody prefix (for example, "key" generates "key0", "key1"…).
 
@@ -122,7 +118,7 @@ And now your cfg look like
 </equipements>
 ```
 
-### cfgSectionCopy(CFGHandle,sectionFrom,sectionTo) -> BOOLEAN
+### cfgSectionCopy(CFGHandle,szSectionFrom,szSectionTo) -> BOOLEAN
 
 Copy section `from` to section `to` with a new name.
 
@@ -130,11 +126,11 @@ Copy section `from` to section `to` with a new name.
 cfgSectionCopy($CFGHandler,"/setup","/setup_copy");
 ```
 
-### cfgSectionDelete(CFGHandle,section) -> BOOLEAN 
+### cfgSectionDelete(CFGHandle,szSection) -> BOOLEAN 
 
 Delete a section.
 
-### cfgSectionList(CFGHandle,section) -> ARRAY
+### cfgSectionList(CFGHandle,szSection) -> ARRAY
 
 List all sections from a section 
 
@@ -145,7 +141,7 @@ foreach my $sectionName ($ARR) {
 }
 ```
 
-### cfgSectionRename(CFGHandle,old,new) -> BOOLEAN
+### cfgSectionRename(CFGHandle,szOldSectionName,szNewSectionName) -> BOOLEAN
 
 Rename a section 
 
