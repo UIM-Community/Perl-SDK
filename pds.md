@@ -56,7 +56,7 @@ if($RC == NIME_OK) {
 }
 ```
 
-### put(name,value,type) -> BOOLEAN
+### put(szName,anyValue,pds_type) -> BOOLEAN
 
 Put a new value in your PDS
 
@@ -66,19 +66,19 @@ $PDS->put("A",5,PDS_INT);
 $PDS->put("B","hello world",PDS_PCH);
 ```
 
-### float(name,value) -> BOOLEAN
+### float(szName,iValue) -> BOOLEAN
 
 Wrapper of put method for FLOAT Type
 
-### number(name,value)
+### number(szName,iValue)
 
 Wrapper of put method for INT Type.
 
-### string(name,value) 
+### string(szName,szValue) 
 
 Wrapper of put method for STRING Type.
 
-### get(name,type) -> <TYPE>VALUE
+### get(szName,pds_type) -> <TYPE>VALUE
 
 Get a value with the given type 
 
@@ -86,7 +86,7 @@ Get a value with the given type
 my $A_Value = $PDS->get("A",PDS_INT);
 ```
 
-### getTable(name,type) -> PDS_PDS | ARRAY
+### getTable(szName,pds_type) -> PDS_PDS | ARRAY
 
 Returns the contents of a table in the PDS.
 
@@ -102,7 +102,7 @@ This function re-initializes the get pointer within the PDS object.
 
 **Note**: You can put a block of data and perform multiple gets separated with a pdsRewind(pds) call.
 
-### remove(name) 
+### remove(szName) 
 
 Remove a key 
 
