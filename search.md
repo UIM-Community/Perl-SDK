@@ -18,6 +18,8 @@ if($rc == NIME_OK) {
 
 All filter fields (with the exception of timeout) are regular expressions. Timeout specifies the timeout for each query the function executes.
 
+### Filters
+
 | Filter(s) string |
 | --- |
 | domain |
@@ -38,6 +40,8 @@ All filter fields (with the exception of timeout) are regular expressions. Timeo
 | active |
 | timeout |
 
+### Flags
+
 | Flags | Description |
 | --- | --- |
 | NIMF_HUB | returns a list of Hub addresses |
@@ -48,12 +52,12 @@ All filter fields (with the exception of timeout) are regular expressions. Timeo
 
 The find functions take a PDS with filters for different search criteria and a flag specifying the type of search as input.
 
-#### nimFindAsPds($pdsFilter,$iFlags)
+#### nimFindAsPds(pdsFilter,iFlags)
 > Return rc,data
 
 This is a wrapper around nimFindAsFunc(). pdsPutTable() is used to fill pdsOut
 
-#### nimFindAsTable($pdsFilter,$iFlags)
+#### nimFindAsTable(pdsFilter,iFlags)
 > Return rc,data
 
 This is a wrapper around nimFindAsFunc(). cslLineInsert() is used to fill pppchOut
