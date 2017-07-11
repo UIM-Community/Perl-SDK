@@ -20,6 +20,7 @@ nimGet methods are created to retrieve or transform information retrieved from l
 | NIMV_ROBOTIP | string | Robot IP |
 | NIMV_HUBNAME | string | Hub name |
 | NIMV_PROBEID | int | Probe id | 
+| NIMV_ROBOTNAME | string | robotname |
 
 ## API 
 
