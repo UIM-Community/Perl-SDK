@@ -62,6 +62,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [Subscribing to bus messages](examples/subscribing_bus.md)
 - [Sending an Alarm message](examples/sending-alarm.md)
 - [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
+- [Sending Qos Data](examples/qos.md)
 
 ## Troubleshooting 
 
