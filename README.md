@@ -6,12 +6,12 @@ The goal of this github is to provide a complete perl SDK documentation with a b
 - [Original documentation](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
 - Some examples & references are taken from C SDK Documentation.
 
-> Work in progress ( ~ 70% done ). 
+> Work in progress ( ~ 80% done ). 
 
 ## Starter guide
 
 - [SDK_Perl on Windows](starterguide/windows.md)
-- [SDK_Perl on UNIX](starterguide/unix.md) **Not complete yet**
+- [SDK_Perl on UNIX](starterguide/unix.md) **[Not complete yet]**
 
 ## Overview 
 
@@ -36,23 +36,23 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 
 ## API 
 
+> API Tagged Nimbus are high-level perl class implementation provided within the SDK_Perl.
+
 - nimRequest & nimNamedRequest - [Here](request.md)
 - [**Nimbus**] Session(s) - [Here](server.md)
-- [**Work in progress**] Probe & Session(s) (**Advanced**) - [Here](probe.md)
 - [**Nimbus**] CFG - [Here](cfg_nimbus.md)
-- CFG - [Here](cfg_cway.md)
 - [**Nimbus**] PDS - [Here](pds.md)
+- Probe & Session(s) (**Advanced**) - [Here](probe.md)
+- CFG - [Here](cfg_cway.md)
 - PDS - [Here](pds_cway.md)
-- [**Contribution Welcome**] CI - [Here](nimCI.md)
-- [**Contribution Welcome**] QOS - [Here](nimQOS.md)
+- CI - [Here](nimCI.md) [**Contribution Welcome**]
+- QOS - [Here](nimQOS.md) [**Contribution Welcome**]
 - nimTimer - [Here](timer.md)
 - nimGet - [Here](nimGet.md)
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
 - others methods - [Here](util.md)
-
-> API Tagged Nimbus are high-level perl class implementation provided within the SDK_Perl.
 
 ## Example(s)
 
