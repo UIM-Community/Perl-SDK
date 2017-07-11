@@ -1,17 +1,17 @@
 # Util API
 
-#### nimInit(iFlag)
+### nimInit(iFlag)
 
 Initialize the NimBUS API. On windows that includes the WinSock initializing. This should be the first
 NimBUS call in any application.
 
-#### nimEnd(iFlag)
+### nimEnd(iFlag)
 
 Release all initialized NimBUS data. This should be the last NimBUS call in any application.
 
 > nimInit and nimEnd are automatically triggered by Perl SDK.
 
-#### nimPostMessage(szSubject,uData,iLevel,szSup)
+### nimPostMessage(szSubject,uData,iLevel,szSup)
 
 Post a message with a given subject to NimBUS. This is the generic method that is the basis for both nimAlarm
 and nimQoS messages.
@@ -21,7 +21,7 @@ and nimQoS messages.
 - iLevel    is the post priority (see Level constants).
 - szSup     is the suppression definition.
 
-#### nimSendReply(hMsg,rc,pds)
+### nimSendReply(hMsg,rc,pds)
 
 Reply to message! 
 
@@ -34,7 +34,7 @@ sub cb_execute {
 }
 ```
 
-#### gettimeofday()
+### gettimeofday()
 
 Returns the time in seconds and in micro-seconds if in a scalar context, or it returns an array with 2 values (seconds, useconds).
 
@@ -45,17 +45,17 @@ my @end   = gettimeofday();
 my $diff  = tv_interval(@start,@end);
 ```
 
-#### nimEncryptString(str) -> String
+### nimEncryptString(String) -> String
 
 Will encrypt the input string using the Twofish algorithm and the encryption key. The function returns a base64
 encoded and encrypted string. The result must be freed after use.
 
-#### nimDecryptString(str) -> String
+### nimDecryptString(String) -> String
 
 The input string must be encrypted by nimEncryptString and the key must be the same. The result must be freed
 after use.
 
-#### nimError2Txt(rc) -> String
+## nimError2Txt(NIM_CODE) -> String
 
 Return return rc as text 
 
@@ -64,24 +64,29 @@ my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-#### nimLogin(szLogin,szPassword); -> RC
+### nimLogin(szLogin,szPassword); -> RC
 
 Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
 NimBUS. You must free the SID when done with it.
 
-#### nimLogout(); -> RC
+```perl
+my ($RC) = nimLogin('administrator','password');
+print "Succesfully connected to NimBUS\n" if $RC == NIME_OK;
+```
+
+### nimLogout(); -> RC
 
 Log off the current user. All global user credentials will be removed
 
-#### nimChangeLogin(szLogin,szPassword); -> RC
+### nimChangeLogin(szLogin,szPassword); -> RC
 
 Can be used to switch between two or more different logins
 
-#### nimGetCurrentSid() -> Integer
+### nimGetCurrentSid() -> Integer
 
-Returns a pointer to the current SID in use by the NimBUS API. NB! Do not modify this value
+Returns a pointer to the current SID in use by the NimBUS API. **Do not modify this value**
 
-#### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
+### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
 
 Create suppression definition string.
 
