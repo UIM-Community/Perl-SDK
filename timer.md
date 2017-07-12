@@ -17,6 +17,8 @@ nimTimerStop($time);
 nimTimerFree($time);
 ```
 
+> **Note**: nimTimerFree seem broken on the Perl implementation (just re-create the timer).
+
 ## API
 
 #### nimTimerCreate() -> Time 
