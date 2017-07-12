@@ -21,6 +21,15 @@ and nimQoS messages.
 - iLevel    is the post priority (see Level constants).
 - szSup     is the suppression definition.
 
+```perl
+my $PDS = Nimbus::PDS->new;
+$PDS->put('level',5,PDS_INT);
+$PDS->put('message','hello world!',PDS_PCH);
+nimPostMessage('alarm2',$PDS->{pds});
+```
+
+> **Warning** This method only allow to post the field "**udata**".
+
 ### nimSendReply(hMsg,rc,pds)
 
 Reply to message! 
