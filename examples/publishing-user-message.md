@@ -1,3 +1,4 @@
+
 # Building and Publishing a User-defined Message
 
 The Perl module Nimbus::PDS wraps the various PDS functions in the Nimsoft API function library.
@@ -17,4 +18,10 @@ my $count = 33;
 $pds->string("directory",$dir);
 $pds->number("count",$count);
 $pds->post("your_subject");
+```
+
+The PDS Class use the nimPostMessage method (you can find the API in utils section). So you can write the post by the follwing code as well : 
+
+```perl
+nimPostMessage("your_subject",$pds->{pds});
 ```
