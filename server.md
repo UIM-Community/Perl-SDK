@@ -39,6 +39,10 @@ string_param, integer_param%d
 
 The attach method causes the session to attach to a queue defined on the hub. As opposed to the subscribe method, messages are queued when the process is detached (for example, not running, or running but detached).
 
+#### subscribe(subjects,hubip,hubport)
+
+The subscribe method causes the session to set up a subscribe channel at the hub. This type of channel is not secure in the sense of deliverability. Messages are only directed down the channel when the session is listening.
+
 #### detach(id)
 
 The detach method disconnects the subscribe channel that is referenced by the $id parameter. The first channel is used if no parameter is supplied.
@@ -94,7 +98,3 @@ This can be very useful if you want to build multiple functions to handle hubpos
 #### setRetryInterval(interval_seconds)
 
 Sets how often to attempt a reconnect if connection to the Hub drops.
-
-#### subscribe(subjects,hubip,hubport)
-
-The subscribe method causes the session to set up a subscribe channel at the hub. This type of channel is not secure in the sense of deliverability. Messages are only directed down the channel when the session is listening.
