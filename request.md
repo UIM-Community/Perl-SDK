@@ -31,3 +31,5 @@ my $PDS = pdsCreate();
 my ($RC,$RES) = nimRequest("/DOMAIN/HUB-NAME/ROBOT-NAME/controller","get_info",$PDS);
 pdsDelete($PDS);
 ```
+
+> **Note** If you create your PDS with Nimbus::PDS you have to put $PDS->data in the callback request to take in account the PDS correctly.
