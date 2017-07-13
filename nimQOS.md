@@ -16,6 +16,24 @@ Send a QoS message with a NULL sample. Used to indicate that the target was unav
 ### nimQoSSendDefinition($szName, $szGroup, $szDesc, $szUnit, $szAbbr [,$iFlags])
 New version of the deprecated nimQoSDefinition function; sends a QoS definition to the Nimsoft bus. This definition must be in place before sending QoS messages for the given named QoS. Should only be sent on startup to avoid excessive work for the data_engine probe.
 
+```perl
+nimQoSSendDefinition('QOS_TEST','QOS_TEST','QoS test description','s',NIMQOS_DEF_NONE);
+```
+
+Valid unit : 
+
+| Unit name | abbreviation |
+| --- | --- | 
+| Bytes | B |
+| Mega Bytes | MB |
+| Giga Bytes | GB |
+| Seconds | s |
+| Milliseconds | ms |
+| Bytes/Second | B/s |
+| Kilobytes/Second | KB/s |
+| Megabytes/Second | MB/s |
+| Percent | % |
+
 ### nimQoSSendValueStdev($hQoS,$szTarget,$fValue,$fStdev)
 
 ### nimQoSPostMessage($handle, $sztarget, $fsamplevalue, $fsample_stdev) -> int
