@@ -99,8 +99,8 @@ Create a new .cfg file like this (namned my.cfg).
 <filesystems>
     <#dev#dsk#c0t3d0s4>
         name = /usr
-            high = 99
-            low  = 70
+        high = 99
+        low  = 70
     </#dev#dsk#c0t3d0s4>
 </filesystems
 ```
