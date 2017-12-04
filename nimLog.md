@@ -6,7 +6,7 @@ nimLog is all method from Perl SDK API that allow to create and manage a log fil
 
 ```perl
 my $LOGFILE = "probe.log"; 
-nimLogSet($LOGFILE,"prefix - ",5);
+nimLogSet($LOGFILE,"prefix - ",5,NIM_LOGF_NOTRUNC);
 nimLogTruncateSize(512 * 1024);
 nimLog(3,"Hello world!"); 
 nimLogSetLevel(2);
