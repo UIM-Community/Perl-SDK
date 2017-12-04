@@ -11,7 +11,7 @@ sub createSection {
     cfgKeyDelete($CFG,$sectionName,"key");
 }
 
-my $CFG = cfgOpen("test.cfg");
+my $CFG = cfgOpen("test.cfg", 0);
 createSection($CFG,"/setup");
 cfgKeyWrite($CFG,"/setup/","loglevel","5"); 
 cfgSync($CFG);
