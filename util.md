@@ -73,14 +73,13 @@ my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-### nimLogin(szLogin,szPassword); -> RC
+### nimLogin(szLogin,szPassword); -> nimLogin
 
 Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
 NimBUS. You must free the SID when done with it.
 
 ```perl
-my ($RC) = nimLogin('administrator','password');
-print "Succesfully connected to NimBUS\n" if $RC == NIME_OK;
+my ($nimLogin) = nimLogin('administrator','password');
 ```
 
 ### nimLogout(); -> RC
