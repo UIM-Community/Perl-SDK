@@ -90,6 +90,10 @@ Possible causes:
 2. They do not reside under the root installation directory for Nimsoft
    - WIN32: c:\program files\Nimsoft\perllib
    - UNIX:    /opt/nimsoft/perllib.
+   
+## Know defects
+
+- nimRequest and nimNamedRequest timeout doesn't work on both UNIX and Windows system.
 
 ## Community link(s)
 
