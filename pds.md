@@ -98,7 +98,9 @@ my $A_Value = $PDS->get("A",PDS_INT);
 
 Returns the contents of a table in the PDS.
 
-### putTable()
+### putTable($name, $value[, $type])
+
+Adds the key/value pair as a table element in the PDS
 
 ### reset() 
 
