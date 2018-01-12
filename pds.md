@@ -42,6 +42,14 @@ Create a new Nimbus::PDS
 my $PDS = Nimbus::PDS->new(); 
 ```
 
+### dump() 
+
+Dump a Nimbus PDS Object
+
+### data() 
+
+Return the original PDS (C Way) data !
+
 ### asHash() -> HASH
 
 Transform PDS to hash. Useful when a callback return a flat PDS structure 
