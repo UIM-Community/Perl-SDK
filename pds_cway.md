@@ -46,7 +46,7 @@ of the current PDS.
 
 This convenience function will return the number of PDS elements in the specified PDS object.
 
-### pdsGetNext()
+### pdsGetNext(PDS)
 
 This function will use the current 'get' position as the starting point for element extraction. Please use the
 pdsRewind() function prior to the first pdsGetNext() call. Note that if no pdsGet() or any of the pdsGet
