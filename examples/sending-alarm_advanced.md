@@ -71,7 +71,7 @@ my ($PDS,$nimId) = generateAlarm('alarm',{
     domain => "domain"
 });
 
-my ($RC,$Response) = nimRequest("robotname",48001,"post_raw",$PDS);
+my ($RC,$Response) = nimRequest("robotname", 48001, "post_raw", $PDS->data);
 if($RC == NIME_OK) {
     print "Alarm with id => $nimId successfully created\n";
 }
