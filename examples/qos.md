@@ -3,6 +3,8 @@
 The probe should only initialize itself during startup by sending the definition. However, it must report the collected data every time it runs. This instructs the data_engine to insert the collected sample value into the database. 
 The following code packs the QoS message into a function:
 
+> Dont forgot to send a new QoS Definitions for **QOS_TEST**
+
 ```perl
 my $samplevalue = 100;
 my $source = nimGetVarStr(NIMV_ROBOTNAME);
