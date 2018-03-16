@@ -1,25 +1,25 @@
 # nimsoft-perlsdk-doc
 CA UIM - Nimsoft - Perl SDK Documentation
 
-The goal of this github is to provide a complete perl SDK documentation with a better global overview of all API. And a new way for community developer to contribute easily to the documentation if any problem is spotted.
+The main goal of this git is to provide a perl SDK documentation with a better visibility on all API and community works. It give a new way for the community to contribute if any problems are spotted too.
 
 - [Original documentation](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/index.htm?toc.htm?2186383.html)
 - Some examples & references are taken from C SDK Documentation.
 
-For a better experience access the web version [Here](https://uim-community.github.io/Perl-SDK/)
+For a better experience find the web version [Here](https://uim-community.github.io/Perl-SDK/)
 
 > Work in progress ( ~ **80% done** ). 
 
-## Starter guide
+## Setup - starter guide
 
 - [SDK_Perl on Windows](starterguide/windows.md)
 - [SDK_Perl on UNIX](starterguide/unix.md) **[Not complete yet]**
 
-## Overview 
+## Overview and vocabulary
 
-- Return code [Here](return_code.md)
+- Return code constants & explaination [Here](return_code.md)
 - Configuration Item (CI) [Here](configuration_item.md)
-- Constants [Here](constants.md)
+- Full constants list [Here](constants.md)
 
 The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the development of probes that are written in Perl.
 
@@ -37,8 +37,6 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 **rc** is the Return Code (integer)
 
 ## API 
-
-> API Tagged Nimbus are high-level perl class implementation provided within the SDK_Perl.
 
 - nimRequest & nimNamedRequest - [Here](request.md)
 - [**Nimbus**] Session(s) - [Here](server.md)
