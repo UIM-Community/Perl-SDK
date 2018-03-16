@@ -60,6 +60,9 @@ The **two firsts are for here for generating a unique nimId** for our alarm (cus
 And generateAlarm is here to return the complete PDS for our alarm. After that we have just to send this PDS to our callback ! 
 
 ```perl
+# Require Nimbus lib
+# Require required Nimbus API
+
 my ($PDS,$nimId) = generateAlarm('alarm',{
     severity => NIML_CRITICAL,
     message => "hello world",
