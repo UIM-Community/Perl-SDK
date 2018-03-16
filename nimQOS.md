@@ -5,6 +5,9 @@
 ### nimQoSCreate (szQoSName,szSource,samplerate,samplemax) -> QoSHandle
 Creates and initializes a QoS object and returns a handle to this object.
 
+### nimQoSFree(QoSHandle)
+Free memory allocation for the given QoS Object.
+
 ### nimQoSCreateAsynch()
 
 ### nimQoSSendValue($hQoS, $szSource, $iValue)
