@@ -29,19 +29,38 @@ Now create your first .pl script with a content like the following example :
 > **Replace the lib path with your Nimsoft perllib directory**
 
 ```perl
+#replace this
+use lib "E:/Nimsoft/perllib";
+
+# Use perl-core package(s)
 use strict;
 use warnings;
-use lib "E:/Nimsoft/perllib"; #replace this
+use Data::Dumper;
 
-nimLogin("administrator","password") # Put your UIM Login/Password 
+# use Nimbus package(s) (from lib at the top of the script)
+use Nimbus::API;
+use Nimbus::PDS;
 
+# Authenticate your script to NimBus
+nimLogin("administrator","password"); # Put your UIM Login/Password 
+
+# Get the robotname from the (local) NimBus
 my $robotname = nimGetVarStr(NIMV_ROBOTNAME);
-my ($RC,$PDS) = nimRequest($robotname,48002,"get_info");
+
+# Make a request to the local agent
+# Second argument is the port of the probe (48002 is equal to controller probe)
+# Third argument is the callback we want to achieve on the probe
+my ($RC, $PDS) = nimRequest($robotname, 48002, "get_info");
 if($RC == NIME_OK) {
-    my $Info = Nimbus::PDS->new($PDS)->asHash();
-    print "$Info->{origin}\n";
-    print "$Info->{robot_device_id}\n";
+    # Transform the PDS response into a readable Perl HASH (ref)
+    my $robotInfo = Nimbus::PDS->new($PDS)->asHash();
+    # print Dumper($robotInfo)."\n";
+    print "$robotInfo->{origin}\n";
+    print "$robotInfo->{robot_device_id}\n";
+}
+else {
+    print nimError2Txt($RC)."\n";
 }
 ```
 
-This little script retrieve information from hub probe (on the robot where the script is executed) by executing get_info callback.
+Find more examples [here](https://github.com/UIM-Community/Perl-SDK/tree/master/examples).
