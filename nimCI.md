@@ -17,17 +17,39 @@ point the message is generated for.
 
 ## API
 
-#### ciOpenRemoteDevice()
-#### ciOpenLocalDevice()
-#### ciClose()
-#### ciRelationship()
-#### ciAttributeString()
-#### ciAttributeNumber()
-#### ciBindQoS()
-#### ciUnBindQoS()
-#### ciGetCachePath()
-#### ciSessionAlarm()
-#### ciAlarm()
+#### ciOpenRemoteDevice(szType, szName, szHost) -> hCI
+Open a handle to a remote device
+
+#### ciOpenLocalDevice(szType, szName) -> hCI
+Open a handle to a local device
+
+#### ciClose(hCI) -> rc
+Close a (CI) handle
+
+#### ciRelationship(hCIParent, hCIChild) -> rc
+Set a parent/child relantionship between to devices
+
+#### ciAttributeString(hCI, szKey, szValue) -> rc
+Set a string attribute in a handle 
+
+#### ciAttributeNumber(hCI, szKey, iValue) -> rc
+Set a numeric attribute in a handle 
+
+#### ciBindQoS(hCI, hQos, szMetric) -> rc
+Bind a QoS to a metric on a device
+
+#### ciUnBindQoS(hQoS) -> rc
+Remove the binding to a device in a QoS handle
+
+#### ciGetCachePath() -> (rc, szPath)
+Get the path to the component information cache on the local system
+
+#### ciSessionAlarm() -> (rc, szId)
+Send an alarm bound to a metric on a device using a session to the spooler
+
+#### ciAlarm(...arguments) -> (rc, szId)
+
+All available arguments are the following: 
 
 - hCI is the CI handle from ciOpen[Remote|Local]Device
 - szMetric is the name of the metric
