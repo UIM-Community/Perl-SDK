@@ -20,7 +20,7 @@ Send a QoS message with a NULL sample. Used to indicate that the target was unav
 New version of the deprecated nimQoSDefinition function; sends a QoS definition to the Nimsoft bus. This definition must be in place before sending QoS messages for the given named QoS. Should only be sent on startup to avoid excessive work for the data_engine probe.
 
 ```perl
-nimQoSSendDefinition('QOS_TEST','QOS_TEST','QoS test description','s',NIMQOS_DEF_NONE);
+nimQoSSendDefinition('QOS_TEST','QOS_TEST','QoS test description','s', 'Seconds', NIMQOS_DEF_NONE);
 ```
 
 Valid unit : 
