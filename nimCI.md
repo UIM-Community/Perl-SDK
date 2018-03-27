@@ -15,6 +15,10 @@ Items, which again have one or more Metrics associated with them. Alarms and
 QoS messages are bound to the CI and the Metric for the specific monitoring 
 point the message is generated for.
 
+## Warnings
+
+CI Method only work when the script is triggered as a probe package. Running a method with the shell terminal will not work !
+
 ## API
 
 #### ciOpenRemoteDevice(szType, szName, szHost) -> hCI
