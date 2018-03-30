@@ -1,6 +1,6 @@
 # nimAlarm
 
-This method allow to generate very simple alarm.
+This method allow to post simple Alarm on the Nimbus.
 
 ## Examples
 
@@ -11,7 +11,7 @@ if($RC == NIME_OK) {
 }
 ```
 
-## Severity 
+## Severity constants
 
 | Constant name | value (INT) | 
 | --- | --- |
@@ -34,4 +34,4 @@ if($RC == NIME_OK) {
 | supkey | STRING | "none" | 
 | alarmSource | STRING | "localhost" | 
 
-> If you put a subsystem_id (think to create this one in the NAS probe).
+> If you put your own subsystem id, dont forgot to create it on the Nas probe!
