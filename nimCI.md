@@ -56,6 +56,11 @@ All new ci_type created have to be set under the category nine. This category wi
 #### ciClose(hCI) -> rc
 Close a (CI) handle
 
+```perl
+my ($hCI) = ciOpenLocalDevice('1.1', 'D:');
+ciClose($hCI);
+```
+
 #### ciRelationship(hCIParent, hCIChild) -> rc
 Set a parent/child relantionship between to devices
 
@@ -68,14 +73,43 @@ Set a numeric attribute in a handle
 #### ciBindQoS(hCI, hQos, szMetric) -> rc
 Bind a QoS to a metric on a device
 
+```perl
+my ($hCI) = ciOpenRemoteDevice('2.1', 'device_name', 'device_ip');
+my $QoS = nimQoSCreate("QOS_NAME", "device_name", 30, -1);
+ciBindQoS($hCI, $QoS, "2.1:1");
+# Play here with QoS
+# Send alarm... They will be linked as metric of the QoS
+ciUnBindQoS($QoS);
+ciClose($hCI);
+```
+
 #### ciUnBindQoS(hQoS) -> rc
 Remove the binding to a device in a QoS handle
 
-#### ciGetCachePath() -> (rc, szPath)
+#### ciGetCachePath() -> (rc, szNisCachePath)
 Get the path to the component information cache on the local system
 
-#### ciSessionAlarm() -> (rc, szId)
+```perl
+my ($RC, $nisCachePath) = ciGetCachePath();
+print "$nisCachePath\n" if $RC == NIME_OK;
+# will output something like: /opt/nimsoft/niscache
+```
+
+#### ciSessionAlarm(nims, ...arguments) -> (rc, szId)
 Send an alarm bound to a metric on a device using a session to the spooler
+
+Nims argument is the Nimbus session.
+
+```perl
+my $sess = Nimbus::Session->new("id-server",$optional_sessions);
+if ($sess->server (NIMPORT_ANY,\&timeout,\&restart) == NIME_OK) {
+    # NimBus session is only available when $sess->server is triggered and when it returned NIME_OK
+    my $nims = $sess->{SERVER_SESS};
+    $sess->dispatch();
+}
+```
+
+> Arguments are the same as ciAlarm (except nims).
 
 #### ciAlarm(...arguments) -> (rc, szId)
 
