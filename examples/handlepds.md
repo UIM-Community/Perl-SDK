@@ -5,6 +5,11 @@ to do exactly with this when we start this Perl SDK or with Nimsoft.
 
 Go througth differents examples : 
 
+## API Used on this example
+
+- [NimRequest](https://github.com/UIM-Community/Perl-SDK/blob/master/request.md)
+- [Nimbus PDS](https://github.com/UIM-Community/Perl-SDK/blob/master/pds.md)
+
 ## Get the PDS and transform it to hash
 
 ```perl
