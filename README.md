@@ -45,14 +45,15 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - Probe & Session(s) (**Advanced**) - [Here](probe.md)
 - CFG - [Here](cfg_cway.md)
 - PDS - [Here](pds_cway.md)
-- CI - [Here](nimCI.md)
-- QOS - [Here](nimQOS.md) [**Contribution Welcome**]
+- CI - [Here](nimCI.md) (**WIP**)
+- QOS - [Here](nimQOS.md)  (**WIP**)
 - nimTimer - [Here](timer.md)
 - nimGet - [Here](nimGet.md)
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
 - others methods - [Here](util.md)
+- Probetoolkit - **Comming soon*
 
 ## Example(s)
 
