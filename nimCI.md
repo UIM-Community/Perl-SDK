@@ -15,17 +15,43 @@ Items, which again have one or more Metrics associated with them. Alarms and
 QoS messages are bound to the CI and the Metric for the specific monitoring 
 point the message is generated for.
 
-## Warnings
-
-CI Method only work when the script is triggered as a probe package. Running a method with the shell terminal will not work !
+> **Warnings**: CI Methods only work if your script is correctly logged to NimBus !
 
 ## API
 
-#### ciOpenRemoteDevice(szType, szName, szHost) -> hCI
-Open a handle to a remote device
+#### ciOpenRemoteDevice(szCIType, szName, szIp) -> hCI
+Open a handle to a remote device.
 
-#### ciOpenLocalDevice(szType, szName) -> hCI
-Open a handle to a local device
+```perl
+# ci_type 2.1 = Network.device
+my ($hCI) = ciOpenRemoteDevice('2.1', 'device_name', 'device_ip');
+if(!defined($hCI)) {
+    print STDERR "Failed to open new CI on remoteDevice 'device_name'\n";
+}
+```
+
+#### ciOpenLocalDevice(szCIType, szName) -> hCI
+Open a handle to a local device. (On the same system as the Nimsoft agent).
+
+```perl
+# ci_type 1.1 = System.Disk
+my ($hCI) = ciOpenLocalDevice('1.1', 'D:');
+if(!defined($hCI)) {
+    print STDERR "Failed to open new CI on localDevice 'D:'\n";
+}
+```
+
+**Base categories of ciType are :**
+
+| ci_id | name |
+| --- | --- |
+| 1 | System |
+| 2 | Network |
+| 3 | Application |
+| 4 | Database |
+| 9 | Private |
+
+All new ci_type created have to be set under the category nine. This category will be conserved when the product will be upgraded for example.
 
 #### ciClose(hCI) -> rc
 Close a (CI) handle
