@@ -45,7 +45,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - Probe & Session(s) (**Advanced**) - [Here](probe.md)
 - CFG - [Here](cfg_cway.md)
 - PDS - [Here](pds_cway.md)
-- CI - [Here](nimCI.md) [**Contribution Welcome**]
+- CI - [Here](nimCI.md)
 - QOS - [Here](nimQOS.md) [**Contribution Welcome**]
 - nimTimer - [Here](timer.md)
 - nimGet - [Here](nimGet.md)
@@ -63,6 +63,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [Sending an Alarm message](examples/sending-alarm.md)
 - [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
 - [Sending Qos Data](examples/qos.md)
+- [Create & Send an Alarm (or) QoS linked to a CI](examples/ci.md)
 - [Transform Hash into a PDS](examples/hash-to-pds.md)
 
 ## Troubleshooting 
