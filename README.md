@@ -94,6 +94,8 @@ Possible causes:
 
 - nimRequest and nimNamedRequest timeout doesn't work on both UNIX and Windows system.
 - Callbacks arguments are returned as 'NULL' or '0' on UNIX systems.
+- Nimbus::PDS::asHash() doesn't work well for Array values.
+- nimTimerFree() doesn't work well.
 
 ## Community link(s)
 
