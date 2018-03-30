@@ -109,6 +109,8 @@ Possible causes:
 
 [SDK Perl Releases Notes](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/ReleaseNotes/Perl%20SDK-2013%205.05.pdf)
 
+[Configuration Items And Metrics](https://communities.ca.com/thread/241721931)
+
 ## Community Framework(s)
 
 - Perluim [Here](https://github.com/fraxken/perluim)
