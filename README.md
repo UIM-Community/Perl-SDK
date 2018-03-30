@@ -65,6 +65,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
 - [Sending Qos Data](examples/qos.md)
 - [Create & Send an Alarm (or) QoS linked to a CI](examples/ci.md)
+- [Crypt/Decrypt CFG Field](examples/encrypt-cfg-file.md)
 - [Transform Hash into a PDS](examples/hash-to-pds.md)
 
 ## Troubleshooting 
