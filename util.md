@@ -64,9 +64,9 @@ encoded and encrypted string. The result must be freed after use.
 The input string must be encrypted by nimEncryptString and the key must be the same. The result must be freed
 after use.
 
-## nimError2Txt(NIM_CODE) -> String
+### nimError2Txt(NIM_CODE) -> String
 
-Return return rc as text 
+Translate the integer return code value into a human readable message!
 
 ```perl
 my $rc = nimRequest(...);
