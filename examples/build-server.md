@@ -15,11 +15,11 @@ Steps in creating your Perl server:
 ```perl
 use Nimbus::API;
 use Nimbus::Session;
-use strict;
 
 # CALLBACK Declarations
 sub your_function {
-    my ($hMsg,$str_param,$int_param) = @_;
+    my ($hMsg, $str_param, $int_param) = @_;
+
     print "your_function: I received a string=$str_param, and a number=$int_param\n";
     nimSendReply ($hMsg);
 }
@@ -43,8 +43,8 @@ if ($sess->server (NIMPORT_ANY,\&timeout,\&restart)==0) {
 }
 ```
 
-Note you can configure the timeout time (milliseconds) in the dispatch method.
+Note you can configure the timeout callback time (milliseconds) in the dispatch method.
 
 ```perl
-$sess->dispatch(10000);
+$sess->dispatch(1000);
 ```
