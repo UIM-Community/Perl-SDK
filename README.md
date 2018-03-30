@@ -93,6 +93,7 @@ Possible causes:
 ## Know defects
 
 - nimRequest and nimNamedRequest timeout doesn't work on both UNIX and Windows system.
+- Callbacks arguments are returned as 'NULL' or '0' on UNIX systems.
 
 ## Community link(s)
 
