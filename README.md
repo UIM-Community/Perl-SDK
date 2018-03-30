@@ -8,12 +8,12 @@ The main goal of this git is to provide a perl SDK documentation with a better v
 
 For a better experience find the web version [Here](https://uim-community.github.io/Perl-SDK/)
 
-> Work in progress ( ~ **80% done** ). 
+> Work in progress ( ~ **85% done** ). 
 
 ## Setup - starter guide
 
 - [SDK_Perl on Windows](starterguide/windows.md)
-- [SDK_Perl on UNIX](starterguide/unix.md) **[Not complete yet]**
+- [SDK_Perl on UNIX](starterguide/unix.md)
 
 ## Overview and vocabulary
 
