@@ -42,7 +42,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [**Nimbus**] Session(s) - [Here](server.md)
 - [**Nimbus**] CFG - [Here](cfg_nimbus.md)
 - [**Nimbus**] PDS - [Here](pds.md)
-- Probe & Session(s) (**Advanced**) - [Here](probe.md)
+- Probe & Session(s) (**Advanced**) - [Here](probe.md) (**WIP**)
 - CFG - [Here](cfg_cway.md)
 - PDS - [Here](pds_cway.md)
 - CI - [Here](nimCI.md) (**WIP**)
@@ -53,7 +53,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
 - others methods - [Here](util.md)
-- Probetoolkit - **Comming soon*
+- Probetoolkit - **Comming soon**
 
 ## Example(s)
 
