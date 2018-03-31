@@ -67,6 +67,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [Create & Send an Alarm (or) QoS linked to a CI](examples/ci.md)
 - [Encrypt/Decrypt CFG Field](examples/encrypt-cfg-file.md)
 - [Transform Perl HashRef object into a valid PDS](examples/hash-to-pds.md)
+- [Get Hubs and Robotos basic informations](examples/callbacks.md)
 
 ## Troubleshooting 
 
