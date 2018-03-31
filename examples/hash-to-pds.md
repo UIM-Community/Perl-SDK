@@ -1,23 +1,32 @@
 # Transform an hash Ref to a PDS Object
 
-In many situations he can be useful to transform the PDS into a Perl hash to make a set of actions. But after that maybe we want to re-publish 
-our PDS somewhere (on a callback response or in a queue).
+## Synopsis
+In many situations he can be useful to transform the PDS into a Perl hash (with asHash() method) to make a set of actions. But after that maybe we want to re-publish the message in the NimBus queue.
 
-So we have to retransform our Hash Object to a PDS.
+So we will see how to retransform our HashRef Object into a valid PDS for the Nimsoft API ! 
+
+## API Used on this example
+
+- [Nimbus PDS](https://github.com/UIM-Community/Perl-SDK/blob/master/pds.md)
+
+## Example
 
 ```perl
+use Nimbus::API;
+use Nimbus::PDS;
 use Scalar::Util qw(looks_like_number); # Dont forget to implement looks_like_number routine
 
+# Copy this routine on your code
 sub pdsFromHash {
     my ($hashRef) = @_;
     my $PDS = Nimbus::PDS->new;
     for my $key (keys %{ $hashRef }) {
         my $val = $hashRef->{$key};
         if(ref($val) eq "HASH") {
-            $PDS->put($key,pdsFromHash($val),PDS_PDS);
+            $PDS->put($key, pdsFromHash($val), PDS_PDS);
         }
         else {
-            $PDS->put($key,$val,looks_like_number($val) ? PDS_INT : PDS_PCH);
+            $PDS->put($key, $val, looks_like_number($val) ? PDS_INT : PDS_PCH);
         }
     }
     return $PDS;
@@ -26,8 +35,10 @@ sub pdsFromHash {
 my $PDS = pdsFromHash({
     message => "hello world"
 });
+$PDS->dump();
 
-nimSendReply($hMsg,NIME_OK,$PDS);
+# Do the action you want here...
+# nimSendReply($hMsg, NIME_OK, $PDS);
 ```
 
 This version dont support "float" Type. However now you can transform your hash into a PDS easily.
