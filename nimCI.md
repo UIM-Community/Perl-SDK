@@ -115,17 +115,19 @@ if ($sess->server (NIMPORT_ANY,\&timeout,\&restart) == NIME_OK) {
 
 All available arguments are the following: 
 
-- hCI is the CI handle from ciOpen[Remote|Local]Device
-- szMetric is the name of the metric
-- iLevel is the alarm level (see Level constants).
-- szMsg  is the alarm message.
-- token  is the alarm token to look up for internationalization.
-- pdsVal is a PDS with the alarm values for internationalization (default:none)
-- szSub  is the subsystem identifier eg. 1.2.3 (default: 1.1).
-- szSup  is the suppression definition (default: none).
-- szSrc  is the alarm source (default: localhost).
-- szCustom1 is a user defined field (default: none).
-- szCustom2 is a user defined field (default: none).
-- szCustom3 is a user defined field (default: none).
-- szCustom4 is a user defined field (default: none).
-- szCustom5 is a user defined field (default: none).
+| Argument name | Description |
+| --- | --- |
+| hCI | the CI handle from ciOpen[Remote|Local]Device |
+| szMetric | the name of the metric |
+| iLevel | the alarm level (severity) - see constants |
+| szMsg | the alarm message |
+| token | token to loop up for internationalization |
+| pdsVal | PDS with the alarm values for internationalization (default:none) |
+| szSub | the subsystem identifier eg. 1.2.3 (default: 1.1). |
+| szSup | the suppression (supp_key) definition (default: none). |
+| szSrc | the alarm source (default: localhost) |
+| szCustom1 | a user defined field (default: none) |
+| szCustom2 | a user defined field (default: none) |
+| szCustom3 | a user defined field (default: none) |
+| szCustom4 | a user defined field (default: none) |
+| szCustom5 | a user defined field (default: none) |
