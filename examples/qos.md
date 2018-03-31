@@ -1,7 +1,15 @@
 # Sending QoS Data
 
+## Synopsis
 The probe should only initialize itself during startup by sending the definition. However, it must report the collected data every time it runs. This instructs the data_engine to insert the collected sample value into the database. 
 The following code packs the QoS message into a function:
+
+## API used in this example
+
+- [QoS](https://github.com/UIM-Community/Perl-SDK/blob/master/nimQOS.md)
+- [NimGet](https://github.com/UIM-Community/Perl-SDK/blob/master/nimGet.md)
+
+## Example
 
 > Dont forgot to send a new QoS Definitions for **QOS_TEST**
 
