@@ -1,9 +1,14 @@
 # Sending an Alarm Message (advanced)
 
-The classical way to send an alarm is not enougth when you need to set fields like 'origin', 'usertag2' or anything else like met_id,dev_id etc..
-So in this case we have to post a new alarm to the spooler probe by our self.
+## Synopsis 
 
-Let code a sample function to generate our alarm PDS :
+Nimsoft Perl API for sending alarms are not useful enought when you have to send an alarm with fields like `origin` or `usertag2`. On this scenera we have to build our owns methods and send a final PDS to the spooler probe with the callback `post_raw`.
+
+## API used in this example
+
+- [Nimbus PDS](https://github.com/UIM-Community/Perl-SDK/blob/master/pds.md)
+
+## Example
 
 ```perl
 sub rndStr { 
@@ -60,8 +65,8 @@ The **two firsts are for here for generating a unique nimId** for our alarm (cus
 And generateAlarm is here to return the complete PDS for our alarm. After that we have just to send this PDS to our callback ! 
 
 ```perl
-# Require Nimbus lib
-# Require required Nimbus API
+use Nimbus::API;
+use Nimbus::PDS;
 
 my ($PDS,$nimId) = generateAlarm('alarm',{
     severity => NIML_CRITICAL,
@@ -71,7 +76,7 @@ my ($PDS,$nimId) = generateAlarm('alarm',{
     domain => "domain"
 });
 
-my ($RC,$Response) = nimRequest("robotname", 48001, "post_raw", $PDS->data);
+my ($RC, $Response) = nimRequest("robotname", 48001, "post_raw", $PDS->data);
 if($RC == NIME_OK) {
     print "Alarm with id => $nimId successfully created\n";
 }
