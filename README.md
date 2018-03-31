@@ -12,6 +12,8 @@ For a better experience find the web version [Here](https://uim-community.github
 
 - [SDK_Perl on Windows](starterguide/windows.md)
 - [SDK_Perl on UNIX](starterguide/unix.md)
+- Editor setup
+- API discovery
 
 ## Overview and vocabulary
 
@@ -56,15 +58,15 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 ## Example(s)
 
 - [How to handle and parse nimRequest and nimNamedRequest PDS](examples/handlepds.md);
-- [Building and Publishing a User-defined Message](examples/publishing-user-message.md)
-- [Build a server solution](examples/build-server.md)
-- [Subscribing to bus messages](examples/subscribing_bus.md)
-- [Sending an Alarm message](examples/sending-alarm.md)
-- [Sending an Alarm message (Advanced)](examples/sending-alarm_advanced.md)
-- [Sending Qos Data](examples/qos.md)
+- [Building and publishing a User-defined Message on Nimbus](examples/publishing-user-message.md)
+- [Build a server (probe) solution](examples/build-server.md)
+- [Subscribing to nimbus messages](examples/subscribing_bus.md)
+- [Sending QoS Data](examples/qos.md)
+- [Sending an Alarm message with nimAlarm](examples/sending-alarm.md)
+- [Sending an Alarm message with spooler post_raw](examples/sending-alarm_advanced.md)
 - [Create & Send an Alarm (or) QoS linked to a CI](examples/ci.md)
-- [Crypt/Decrypt CFG Field](examples/encrypt-cfg-file.md)
-- [Transform Hash into a PDS](examples/hash-to-pds.md)
+- [Encrypt/Decrypt CFG Field](examples/encrypt-cfg-file.md)
+- [Transform Perl HashRef object into a valid PDS](examples/hash-to-pds.md)
 
 ## Troubleshooting 
 
