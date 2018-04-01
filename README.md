@@ -1,4 +1,4 @@
-# nimsoft-perlsdk-doc
+# CA UIM - Perl SDK
 CA UIM - Nimsoft - Perl SDK Documentation
 
 The main goal of this git is to provide a perl SDK documentation with a better visibility on all API and community works. It give a new way for the community to contribute if any problems are spotted too.
@@ -7,13 +7,6 @@ The main goal of this git is to provide a perl SDK documentation with a better v
 - Some examples & references are taken from [C SDK Documentation](https://docops.ca.com/ca-unified-infrastructure-management/8-47/en/files/347300187/347300188/1/1469586972064/C+SDK+Reference-1.pdf).
 
 For a better experience find the web version [Here](https://uim-community.github.io/Perl-SDK/)
-
-## Setup - starter guide
-
-- [SDK_Perl on Windows](starterguide/windows.md)
-- [SDK_Perl on UNIX](starterguide/unix.md)
-- Editor setup
-- API discovery
 
 ## Overview and vocabulary
 
@@ -36,6 +29,13 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 
 **rc** is the Return Code (integer)
 
+## Starter guides
+
+- [SDK_Perl on Windows](starterguide/windows.md)
+- [SDK_Perl on UNIX](starterguide/unix.md)
+- Setup a code editor (**Comming soon**)
+- API Introduction guide (**Comming soon**)
+
 ## API 
 
 - nimRequest & nimNamedRequest - [Here](request.md)
@@ -55,7 +55,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - others methods - [Here](util.md)
 - Probetoolkit - **Comming soon**
 
-## Example(s)
+## Code examples
 
 - [How to handle and parse nimRequest and nimNamedRequest PDS](examples/handlepds.md);
 - [Building and publishing a User-defined Message on Nimbus](examples/publishing-user-message.md)
