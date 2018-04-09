@@ -15,7 +15,29 @@ Items, which again have one or more Metrics associated with them. Alarms and
 QoS messages are bound to the CI and the Metric for the specific monitoring 
 point the message is generated for.
 
-> **Warnings**: CI Methods only work if your script is correctly logged to NimBus !
+## Warnings
+
+Before using CI methods please ensure to be :
+- Correctly logged to NimBus with the `nimLogin` method (success and failure messages are logged to the hub / controller log).
+- Setup the NIM_ROOT environment variable.
+
+Sometimes this code can do the job (but sometimes you will need to setup the variable on the local system by your self).
+
+```perl
+# *NIX
+$ENV{'NIM_ROOT'} = "/opt/nimsoft";
+```
+
+```perl
+# Windows
+$ENV{'NIM_ROOT'} = "D:\\nimsoft";
+```
+
+The following code have to work (else that mean something is not working as expected).
+```perl
+my ($RC, $nisCachePath) = ciGetCachePath();
+print "nisCachePath => $nisCachePath\n";
+```
 
 ## API
 
