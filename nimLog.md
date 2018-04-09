@@ -5,12 +5,21 @@ nimLog is all method from Perl SDK API that allow to create and manage a log fil
 ## Examples 
 
 ```perl
+# Your log (file) name
 my $LOGFILE = "probe.log"; 
-nimLogSet($LOGFILE,"prefix - ",5,NIM_LOGF_NOTRUNC);
+
+# Open the nimLog handle
+nimLogSet($LOGFILE, "", 5, NIM_LOGF_NOTRUNC);
+
+# Truncate the log file size to 512KB
 nimLogTruncateSize(512 * 1024);
-nimLog(3,"Hello world!"); 
+nimLog(3,"Hello world!");
+
+# Set the log level to 2
 nimLogSetLevel(2);
 nimLog(3,"Hello world!"); # Skipped
+
+# Close current log
 nimLogClose()
 ```
 
