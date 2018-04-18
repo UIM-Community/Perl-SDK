@@ -2,17 +2,21 @@
 
 ## Example 
 
-Return a list of robot addresses where he finded the "nas" probe.
+Return a list of Nimsoft probe addresses where he finded the "nas" probe.
 
 ```perl
 my $PDS = Nimbus::PDS->new();
-$PDS->put('probename','nas',PDS_PCH);
-my ($rc,$data) = nimFindAsPds($PDS->data,NIMF_ROBOT);
-
-if($rc == NIME_OK) {
-    pdsDump($data);
-}
+$PDS->string("probename", "nas");
+my ($RC, $pdsRET) = nimFindAsPds($PDS->data, NIMF_PROBE);
+pdsDump($pdsRET) if $RC == NIME_OK;
 ```
+
+If you want to recover the first addr, take a look at the following code
+```perl
+my $nasAddr = Nimbus::PDS->new($pdsRET)->getTable("addr", PDS_PCH);
+```
+
+There is an issue around how PDS handle some Array type (so it could be difficult to get multiple addr depending on the used API).
 
 ## Constants
 
