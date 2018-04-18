@@ -1,16 +1,5 @@
 # Util API
 
-### nimInit(iFlag)
-
-Initialize the NimBUS API. On windows that includes the WinSock initializing. This should be the first
-NimBUS call in any application.
-
-### nimEnd(iFlag)
-
-Release all initialized NimBUS data. This should be the last NimBUS call in any application.
-
-> nimInit and nimEnd are automatically triggered by Perl SDK.
-
 ### nimPostMessage(szSubject,uData,iLevel,szSup)
 
 Post a message with a given subject to NimBUS. This is the generic method that is the basis for both nimAlarm
@@ -23,25 +12,37 @@ and nimQoS messages.
 
 ```perl
 my $PDS = Nimbus::PDS->new;
-$PDS->put('level',5,PDS_INT);
-$PDS->put('message','hello world!',PDS_PCH);
-nimPostMessage('alarm2',$PDS->{pds});
+$PDS->number('level', 5);
+$PDS->string('message', 'hello world!');
+
+nimPostMessage('alarm2', $PDS->data);
 ```
 
 > **Warning** This method only allow to post the field "**udata**".
 
-### nimSendReply(hMsg,rc,pds)
+### nimSendReply(hMsg, iRC, pds)
 
-Reply to message! 
+Reply to a triggered callback.
 
 ```perl
 sub cb_execute {
     my ($hMsg) = @_;
     my $PDS = Nimbus::PDS->new(); 
-    $PDS->put("status","ok",PDS_PCH);
-    nimSendReply($hMsg,NIME_OK,$PDS);
+    $PDS->string("status", "ok");
+
+    nimSendReply($hMsg, NIME_OK, $PDS->data);
 }
 ```
+
+### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
+
+Create suppression definition string.
+
+```perl
+my $szSup = nimSuppToStr(0,0,0,"FileSystem|$name");
+$szSup = nimSuppToStr(1, 0, 60, "");
+```
+Set new string variable.
 
 ### nimError2Txt(NIM_CODE) -> String
 
@@ -52,12 +53,13 @@ my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
+### nimInit(iFlag)
 
-Create suppression definition string.
+Initialize the NimBUS API. On windows that includes the WinSock initializing. This should be the first
+NimBUS call in any application.
 
-```perl
-my $szSup = nimSuppToStr(0,0,0,"FileSystem|$name");
-$szSup = nimSuppToStr(1,0,60,"");
-```
-Set new string variable.
+### nimEnd(iFlag)
+
+Release all initialized NimBUS data. This should be the last NimBUS call in any application.
+
+> nimInit and nimEnd are automatically triggered by Perl SDK.
