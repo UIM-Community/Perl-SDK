@@ -55,6 +55,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - nimFind - [Here](search.md)
 - nimLog - [Here](nimLog.md)
 - nimAlarm - [Here](nimAlarm.md)
+- encryption - [Here](encrypt.md)
 - others methods - [Here](util.md)
 - Probetoolkit - **Comming soon**
 
