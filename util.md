@@ -73,27 +73,6 @@ my $rc = nimRequest(...);
 print nimError2Txt($rc);
 ```
 
-### nimLogin(szLogin,szPassword); -> nimLogin
-
-Login to NimBUS with user name and password. The login is global and will affect all subsequently calls to
-NimBUS. You must free the SID when done with it.
-
-```perl
-my ($nimLogin) = nimLogin('administrator','password');
-```
-
-### nimLogout(); -> RC
-
-Log off the current user. All global user credentials will be removed
-
-### nimChangeLogin(szLogin,szPassword); -> RC
-
-Can be used to switch between two or more different logins
-
-### nimGetCurrentSid() -> Integer
-
-Returns a pointer to the current SID in use by the NimBUS API. **Do not modify this value**
-
 ### nimSuppToStr(bHold,iNumber,iSeconds,szSuppKey) -> String
 
 Create suppression definition string.
