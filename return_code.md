@@ -26,9 +26,16 @@
 | NIME_INVOP | 21 | N.A |
 | NIME_USER | 100 | N.A | 
 
+Nimsoft API only return the integer code. If you want a complete description, use the `nimError2Txt` method to get the linked string description.
+
+```perl
+my $nimError = nimError2Txt($RC);
+print "Error ($RC): $nimError\n";
+```
+
 ## How to use ?
 
-In your perl code you can use these return code.
+In your perl code you can check these return code with the linked Nimbus constant ! 
 
 ```perl
 if(NIME_OK == 0) {
@@ -39,13 +46,14 @@ if(NIME_OK == 0) {
 If you made a nimRequest (or nimNamedRequest) the best practice it's to use the constant variable and not the int value directly. For example : 
 
 ```perl
-my ($RC,$NFO) = nimRequest('controller',48000,'get_info');
-# Best practice
+# GOOD
 if($RC == NIME_OK) {
 
 }
+```
 
-# Bad practice 
+```perl
+# BAD
 if($RC == 0) {
 
 }
@@ -58,5 +66,8 @@ If you try to execute your script directly on the system and you get a NIME_ACCE
 Add this to your code : 
 
 ```perl
-nimLogin('login','password');
+my ($nimCS) = nimLogin('login', 'password');
+if(not defined $nimCS) {
+    print STDERR "NimBUS Authentication failed!\n";
+}
 ```
