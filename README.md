@@ -40,6 +40,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 
 > When you use API for a Perl script that will be executed on a terminal (so not packaged to be executed as a deamon or a timed probe). You will have to login to the NimBus to not encounter Authentification errors.
 
+- NimBUS Authentication - [Here](authentication.md)
 - nimRequest & nimNamedRequest - [Here](request.md)
 - [**Nimbus**] Session(s) - [Here](server.md)
 - [**Nimbus**] CFG - [Here](cfg_nimbus.md)
