@@ -43,17 +43,6 @@ sub cb_execute {
 }
 ```
 
-### gettimeofday()
-
-Returns the time in seconds and in micro-seconds if in a scalar context, or it returns an array with 2 values (seconds, useconds).
-
-```perl
-my @start = gettimeofday();
-# do stuff...
-my @end   = gettimeofday();
-my $diff  = tv_interval(@start,@end);
-```
-
 ### nimEncryptString(szKey, szString) -> String
 
 Will encrypt the input string using the Twofish algorithm and the encryption key. The function returns a base64
