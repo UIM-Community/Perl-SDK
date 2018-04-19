@@ -17,13 +17,18 @@ use Nimbus::PDS;
 
 # get hubslist from local hub
 sub getHubs {
-	my ($rc, $retdata) = nimNamedRequest("hub", "gethubs", Nimbus::PDS->new()->data);
-	die "Failed to execute `gethubs` on the local hub, reason :: ".nimError2Txt($rc)."\n" if $rc != NIME_OK;
+	my ($RC, $pdsRET) = nimNamedRequest("hub", "gethubs", Nimbus::PDS->new()->data);
+    if ($RC != NIME_OK) {
+        my $nimError = nimError2Txt($RC);
+        die "Failed to execute `gethubs` on the current connected hub, Error ($RC): $nimError\n";
+    }
+
 	my @hubs = ();
-	my $PPDS = Nimbus::PDS->new($retdata);
-	for( my $i = 0; my $HUBPDS = $PPDS->getTable("hublist", PDS_PDS, $i); $i++) {
+	my $PPDS = Nimbus::PDS->new($pdsRET);
+	for ( my $i = 0; my $HUBPDS = $PPDS->getTable("hublist", PDS_PDS, $i); $i++) {
 		push(@hubs, $HUBPDS->asHash());
 	}
+
 	return \@hubs;
 }
 
@@ -32,20 +37,22 @@ eval {
 	my $hubArr = getHubs();
 	my @robots = ();
 	foreach my $hub (@{ $hubArr }) {
-		my ($rc, $retdata) = nimNamedRequest("$hub->{addr}", "getrobots", Nimbus::PDS->new()->data);
-		if($rc != NIME_OK) {
-			my $error = nimError2Txt($rc);
-			print STDERR "Faild to execute `getrobots` on hub addr $hub->{addr}, reason :: $error\n";
+		my ($RC, $pdsRET) = nimNamedRequest("$hub->{addr}", "getrobots", Nimbus::PDS->new()->data);
+		if ($RC != NIME_OK) {
+			my $nimError = nimError2Txt($rc);
+			print STDERR "Faild to execute `getrobots` on hub addr $hub->{addr}, Error ($RC): $nimError\n";
 			next;
 		}
-		my $PPDS = Nimbus::PDS->new($retdata);
-		for( my $i = 0; my $ROBOTPDS = $PPDS->getTable("robotlist", PDS_PDS, $i); $i++) {
-      push(@robots, $ROBOTPDS->asHash());
-    }
+
+		my $PPDS = Nimbus::PDS->new($pdsRET);
+		for ( my $i = 0; my $ROBOTPDS = $PPDS->getTable("robotlist", PDS_PDS, $i); $i++) {
+            push(@robots, $ROBOTPDS->asHash());
+        }
 	}
 
 	my $totalRobotCount = scalar @robots;
 	print STDOUT "Total robots count: $totalRobotCount\n";
+    print Dumper(@robots)."\n";
 
 	# Do what you want here
 	# execute get_info to get more informations !
