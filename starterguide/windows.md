@@ -45,7 +45,11 @@ use Nimbus::PDS;
 nimLogin("administrator","password"); # Put your UIM Login/Password 
 
 # Get the robotname from the (local) NimBus
-my $robotname = nimGetVarStr(NIMV_ROBOTNAME);
+my ($RC, $robotname) = nimGetVarStr(NIMV_ROBOTNAME);
+if ($RC != NIME_OK) {
+    die "Failed to retrieve the current robotname\n";
+}
+undef $RC;
 
 # Make a request to the local agent
 # Second argument is the port of the probe (48002 is equal to controller probe)
