@@ -11,16 +11,26 @@ Nimsoft Perl API for sending alarms are not useful enought when you have to send
 ## Example
 
 ```perl
+
+#
+# DESC: Generate a random string between multiple length integers
+#
 sub rndStr { 
     return join'', @_[ map{ rand @_ } 1 .. shift ] 
 }
 
+#
+# DESC: Generate a valid random nimid
+#
 sub nimId {
     my $A = rndStr(10,'A'..'Z',0..9);
     my $B = rndStr(5,0..9);
     return "$A-$B";
 }
 
+#
+# DESC: Generate alarm PDS
+#
 sub generateAlarm {
     my ($subject,$hashRef) = @_;
 
@@ -68,7 +78,7 @@ And generateAlarm is here to return the complete PDS for our alarm. After that w
 use Nimbus::API;
 use Nimbus::PDS;
 
-my ($PDS,$nimId) = generateAlarm('alarm',{
+my ($PDS, $nimId) = generateAlarm('alarm',{
     severity => NIML_CRITICAL,
     message => "hello world",
     origin => "yahou",
@@ -81,6 +91,7 @@ if($RC == NIME_OK) {
     print "Alarm with id => $nimId successfully created\n";
 }
 else {
-    print "Failed to create alarm id => $nimID, rc => $RC\n";
+    my $nimError = nimError2Txt($RC);
+    print "Failed to trigger new alarm with id => $nimID, Error ($RC): $nimError\n";
 }
 ```
