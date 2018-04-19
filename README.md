@@ -71,7 +71,7 @@ The Perl SDK modules wrap the Nimsoft Message Bus API functions, easing the deve
 - [Create & Send an Alarm (or) QoS linked to a CI](examples/ci.md)
 - [Encrypt/Decrypt CFG Field](examples/encrypt-cfg-file.md)
 - [Transform Perl HashRef object into a valid PDS](examples/hash-to-pds.md)
-- [Get Hubs and Robotos basic informations](examples/callbacks.md)
+- [Get Hubs and Robots basic informations](examples/callbacks.md)
 
 ## Troubleshooting 
 
@@ -104,21 +104,16 @@ Possible causes:
 - Nimbus::PDS::asHash() doesn't work well for Array values.
 - nimTimerFree() doesn't work well.
 
-## Community link(s)
+## Community links
 
-[Perl probe kickstarter - Part 1 - Develop a custom Perl probe](https://communities.ca.com/docs/DOC-231172625)
+- [Perl probe kickstarter - Part 1 - Develop a custom Perl probe](https://communities.ca.com/docs/DOC-231172625)
+- [Perl probe kickstarter - Part 2 - Package and distribute](https://communities.ca.com/docs/DOC-231172657)
+- [Perl probe kickstarter - Part 3 - Code, debug and deploy](https://communities.ca.com/docs/DOC-231172784)
+- [Compiling & Installing Perl Modules on Linux](https://communities.ca.com/docs/DOC-231169163)
+- [SDK Perl Releases Notes](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/ReleaseNotes/Perl%20SDK-2013%205.05.pdf)
+- [Configuration Items And Metrics](https://communities.ca.com/thread/241721931)
 
-[Perl probe kickstarter - Part 2 - Package and distribute](https://communities.ca.com/docs/DOC-231172657)
-
-[Perl probe kickstarter - Part 3 - Code, debug and deploy](https://communities.ca.com/docs/DOC-231172784)
-
-[Compiling & Installing Perl Modules on Linux](https://communities.ca.com/docs/DOC-231169163)
-
-[SDK Perl Releases Notes](http://docs.nimsoft.com/prodhelp/en_US/Monitor/SDK/PerlSDK/ReleaseNotes/Perl%20SDK-2013%205.05.pdf)
-
-[Configuration Items And Metrics](https://communities.ca.com/thread/241721931)
-
-## Community Framework(s)
+## Community Frameworks
 
 - Perluim [Here](https://github.com/fraxken/perluim)
 - Perluim5 (Alpha stage) [Here](https://github.com/UIM-Community/perluim5)
