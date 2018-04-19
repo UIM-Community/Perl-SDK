@@ -17,13 +17,37 @@ use Nimbus::PDS;
 use Scalar::Util qw(looks_like_number); # Dont forget to implement looks_like_number routine
 
 # Copy this routine on your code
+sub pdsFromArray {
+    my ($arrayRef) = @_;
+    return if ref($arrayRef) ne "ARRAY";
+
+    my $PDS = Nimbus::PDS->new;
+    my $index = 0;
+    foreach(@{ $arrayRef }) {
+        if (ref($_) eq "HASH") {
+            $PDS->put($index, pdsFromHash($_), PDS_PDS);
+        }
+        elsif (ref($_) eq "ARRAY") {
+            $PDS->put($index, pdsFromArray($_), PDS_PDS);
+        }
+        else {
+            $PDS->put($index, $_, looks_like_number($_) ? PDS_INT : PDS_PCH);
+        }
+        $index++;
+    }
+    return $PDS;
+}
+
 sub pdsFromHash {
     my ($hashRef) = @_;
     my $PDS = Nimbus::PDS->new;
     for my $key (keys %{ $hashRef }) {
         my $val = $hashRef->{$key};
-        if(ref($val) eq "HASH") {
+        if (ref($val) eq "HASH") {
             $PDS->put($key, pdsFromHash($val), PDS_PDS);
+        }
+        elsif (ref($val) eq "ARRAY") {
+            $PDS->put($key, pdsFromArray($val), PDS_PDS);
         }
         else {
             $PDS->put($key, $val, looks_like_number($val) ? PDS_INT : PDS_PCH);
@@ -41,4 +65,4 @@ $PDS->dump();
 # nimSendReply($hMsg, NIME_OK, $PDS);
 ```
 
-This version dont support "float" Type. However now you can transform your hash into a PDS easily.
+This version doesn't support float and native PDS Array types because of some SDK Perl limitation (some methods and PDS Types are missing).
