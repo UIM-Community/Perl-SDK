@@ -32,12 +32,12 @@ if ($RC != NIME_OK) {
 }
 ```
 
-## nimNamedRequest(szAddr, szCallback, pdsData)
+## nimNamedRequest(szAddr, szCallback[, pdsData])
 
 Send a named request over the Nimsoft Bus to a server. This function works through Hub Tunnels, because the routing of messages is up to the Hub.
 
 ```perl
-my ($RC,$RES) = nimRequest(
+my ($RC,$RES) = nimNamedRequest(
     "/DOMAIN/HUB-NAME/ROBOT-NAME/controller",
     "get_info",
     Nimbus::PDS->new()->data
