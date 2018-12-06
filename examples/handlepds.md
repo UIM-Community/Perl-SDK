@@ -14,7 +14,7 @@ Go througth differents examples :
 
 ```perl
 my $PDS = Nimbus::PDS->new;
-my ($RC,$Response) = nimNamedRequest("controller","get_info",$PDS);
+my ($RC, $Response) = nimNamedRequest("controller", "get_info", $PDS->data);
 
 if($RC == NIME_OK) {
     my $PDS = Nimbus::PDS->new($Response);
@@ -32,11 +32,11 @@ You can continue to work directly with PDS or transform your PDS Object to an Ha
 
 ```perl
 my $PDS = Nimbus::PDS->new;
-my ($RC,$Response) = nimNamedRequest("hub","getrobots",$PDS);
+my ($RC, $Response) = nimNamedRequest("hub", "getrobots", $PDS->data);
 
 if($RC == NIME_OK) {
     my $PPDS = Nimbus::PDS->new($Response);
-    for( my $count = 0; my $RobotPDS = $PPDS->getTable("robotlist",PDS_PDS,$count); $count++) {
+    for( my $count = 0; my $RobotPDS = $PPDS->getTable("robotlist", PDS_PDS, $count); $count++) {
         my $robot_name = $RobotPDS->get("name");
         # or $robotHashRef = $RobotPDS->asHash(); 
         # $robotHashRef->{name};
